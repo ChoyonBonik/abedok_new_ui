@@ -8,6 +8,7 @@ import 'package:abedok_new_ui/pages/page_5.dart';
 import 'package:abedok_new_ui/pages/page_6.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -507,7 +508,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/1.png'),
+                                image: AssetImage('images/govt.png'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -522,7 +523,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/Work1.png'),
+                                image: AssetImage('images/nid.png'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -537,7 +538,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/1.png'),
+                                image: AssetImage('images/nid.png'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -552,7 +553,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/Work1.png'),
+                                image: AssetImage('images/nid.png'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -592,7 +593,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           child: Column(
                             children: [
                               Image(
-                                  image: AssetImage('images/invite.png'),
+                                  image: AssetImage('images/police.png'),
                                   height: 80,
                                   width: 80),
                               SizedBox(
@@ -751,9 +752,442 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(right: 270),
+              child: Text("Explore >",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink,
+                  )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child:
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(40),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                child: Icon(FontAwesomeIcons.globe, color: Colors.white, size: 30,),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                              ),
+                              SizedBox(height: 05,),
+                              Text('Web')
+                            ],
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                child: Icon(FontAwesomeIcons.flag, color: Colors.white, size: 30,),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(40),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                              ),
+                              SizedBox(height: 05,),
+                              Text('Page')
+                            ],
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                child: Icon(FontAwesomeIcons.facebook,color: Colors.white, size: 30,),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(40),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                              ),
+                              SizedBox(height: 05,),
+                              Text('Facebook')
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                                child: Icon(FontAwesomeIcons.linkedin, color: Colors.white, size: 30),
+                              ),
+                              SizedBox(height: 05,),
+                              Text('Linkedin')
+                            ],
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                child: Icon(FontAwesomeIcons.youtube, size: 30, color: Colors.white),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                              ),
+                              SizedBox(height: 05,),
+                              Text('YouTube')
+                            ],
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                child: Icon(FontAwesomeIcons.instagram, color: Colors.white, size: 30),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  gradient: LinearGradient(colors: [
+                                    Color(hexColor('#E90D65')),
+                                    Color(hexColor('#AC0087')),
+                                  ]),
+                                ),
+                                height: 70,
+                                width: 70,
+                                //color: Colors.red,
+                              ),
+                              SizedBox(height: 05,),
+                              Text('Instagram')
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                // Column(
+                //   children: [
+                //     Row(
+                //       children: [
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //       ],
+                //     ),
+                //     Row(
+                //       children: [
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //         CircleAvatar(
+                //           backgroundColor: Colors.red,
+                //           radius: 30,
+                //         ),
+                //       ],
+                //     ),
+                //   ],
+                // ),
+                height: 260,
+                width: double.infinity,
+                color: Colors.transparent,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 100),
+              child: Text("Service you have Taken",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 180),
+                                child: Text('10-12-2000'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  children: [
+                                    Image.asset('images/police.png',
+                                      cacheHeight: 60,
+                                      cacheWidth: 60,
+                                      alignment: Alignment.centerLeft,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 05),
+                                      child: Text('Grade-5'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: Text('500'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          border: Border.all(color: Colors.grey.shade300),
+                        ),
+                        height: 200,
+                        width: 300,
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 180),
+                                child: Text('10-12-2000'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  children: [
+                                    Image.asset('images/police.png',
+                                      cacheHeight: 60,
+                                      cacheWidth: 60,
+                                      alignment: Alignment.centerLeft,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 05),
+                                      child: Text('Grade-5'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: Text('500'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          border: Border.all(color: Colors.grey.shade300),
+                        ),
+                        height: 200,
+                        width: 300,
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 180),
+                                child: Text('10-12-2000'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  children: [
+                                    Image.asset('images/police.png',
+                                      cacheHeight: 60,
+                                      cacheWidth: 60,
+                                      alignment: Alignment.centerLeft,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Row(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 05),
+                                      child: Text('Grade-5'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: Text('500'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 47),
+                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          border: Border.all(color: Colors.grey.shade300),
+                        ),
+                        height: 200,
+                        width: 300,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // SizedBox(
+            //   height: 10,
+            // ),
+            // SizedBox(
+            //   height: 10,
+            // ),
           ],
         ),
       ),
     );
+  }
+  int hexColor(String color) {
+    String newColor = '0xff' + color;
+    newColor = newColor.replaceAll('#', '');
+    int finalColor = int.parse(newColor);
+    return finalColor;
   }
 }
