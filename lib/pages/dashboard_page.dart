@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:abedok_new_ui/pages/page_1.dart';
 import 'package:abedok_new_ui/pages/page_2.dart';
 import 'package:abedok_new_ui/pages/page_3.dart';
@@ -8,7 +6,9 @@ import 'package:abedok_new_ui/pages/page_5.dart';
 import 'package:abedok_new_ui/pages/page_6.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -18,50 +18,128 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  // late final PageController pageController;
-  // ScrollController _scrollController = ScrollController();
-  // int pageNo = 0;
-  //
-  // Timer? carasouelTmer;
-  //
-  // Timer getTimer() {
-  //   return Timer.periodic(const Duration(seconds: 3), (timer) {
-  //     if (pageNo == 4) {
-  //       pageNo = 0;
-  //     }
-  //     pageController.animateToPage(
-  //       pageNo,
-  //       duration: const Duration(seconds: 1),
-  //       curve: Curves.easeInOutCirc,
-  //     );
-  //     pageNo++;
-  //   });
-  // }
-  // @override
-  // void initState() {
-  //   pageController = PageController(initialPage: 0, viewportFraction: 0.85);
-  //   carasouelTmer = getTimer();
-  //   _scrollController.addListener(() {
-  //     if (_scrollController.position.userScrollDirection ==
-  //         ScrollDirection.reverse) {
-  //       showBtmAppBr = false;
-  //       setState(() {});
-  //     } else {
-  //       showBtmAppBr = true;
-  //       setState(() {});
-  //     }
-  //   });
-  //   super.initState();
-  // }
-  // bool showBtmAppBr = true;
-  // @override
-  // void dispose() {
-  //   pageController.dispose();
-  //   super.dispose();
-  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(
+          right: 20,
+          left: 20,
+        ),
+        child: Align(
+          heightFactor: 0.1,
+          widthFactor: 0.1,
+          alignment: Alignment(0.0, 2.0),
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child:
+              // BottomNavigationBar(
+              //     items: [
+              //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+              //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+              //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+              //     ],
+              //   selectedItemColor: Colors.white,
+              //   unselectedItemColor: Colors.grey,
+              //   showSelectedLabels: true,
+              //   showUnselectedLabels: false,
+              //   backgroundColor: Colors.black,
+              //   currentIndex: _pageIndex,
+              //   onTap: (int index){
+              //       setState(() {
+              //         _pageIndex = index;
+              //       });
+              //   },
+              // ),
+              GNav(
+                // tabShadow: [BoxShadow(
+                //   color: Colors.grey
+                // )],
+                gap: 8,
+                padding: EdgeInsets.all(10),
+                tabMargin: EdgeInsets.all(10),
+                backgroundColor: Colors.white,
+                color: Colors.black,
+                activeColor: Colors.black,
+                tabBackgroundColor: Colors.grey.shade300,
+                tabs: [
+                  GButton(
+                    icon: Icons.home,
+                    text: 'home',
+                  ),
+                  GButton(
+                    icon: Icons.home,
+                    text: 'home',
+                  ),
+                  GButton(
+                    icon: Icons.home,
+                    text: 'home',
+                  ),
+                ],
+              )
+          ),
+        ),
+      ),
+      // bottomNavigationBar: Padding(
+      //   padding: EdgeInsets.only(
+      //     bottom: 0,
+      //     right: 20,
+      //     left: 20,
+      //   ),
+      //   child: Align(
+      //     heightFactor: 0.0,
+      //     widthFactor: 0.0,
+      //     alignment: Alignment(0.0, 2.0),
+      //     child: ClipRRect(
+      //         borderRadius: BorderRadius.circular(30),
+      //         child:
+      //         // BottomNavigationBar(
+      //         //     items: [
+      //         //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+      //         //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+      //         //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+      //         //     ],
+      //         //   selectedItemColor: Colors.white,
+      //         //   unselectedItemColor: Colors.grey,
+      //         //   showSelectedLabels: true,
+      //         //   showUnselectedLabels: false,
+      //         //   backgroundColor: Colors.black,
+      //         //   currentIndex: _pageIndex,
+      //         //   onTap: (int index){
+      //         //       setState(() {
+      //         //         _pageIndex = index;
+      //         //       });
+      //         //   },
+      //         // ),
+      //         GNav(
+      //           // tabShadow: [BoxShadow(
+      //           //   color: Colors.grey
+      //           // )],
+      //           gap: 8,
+      //           padding: EdgeInsets.all(10),
+      //           tabMargin: EdgeInsets.all(10),
+      //           backgroundColor: Colors.black,
+      //           color: Colors.white,
+      //           activeColor: Colors.black,
+      //           tabBackgroundColor: Colors.grey.shade300,
+      //           tabs: [
+      //             GButton(
+      //               icon: Icons.home,
+      //               text: 'home',
+      //             ),
+      //             GButton(
+      //               icon: Icons.home,
+      //               text: 'home',
+      //             ),
+      //             GButton(
+      //               icon: Icons.home,
+      //               text: 'home',
+      //             ),
+      //           ],
+      //         )
+      //     ),
+      //   ),
+      // ),
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent,
         bottom: PreferredSize(
@@ -164,7 +242,7 @@ class _DashboardPageState extends State<DashboardPage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(15),
+              margin: EdgeInsets.all(10),
               //padding: EdgeInsets.all(),
               child: Column(
                 children: [
@@ -752,7 +830,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 270),
               child: Text("Explore >",
@@ -765,8 +845,7 @@ class _DashboardPageState extends State<DashboardPage> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                child:
-                Padding(
+                child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -785,12 +864,18 @@ class _DashboardPageState extends State<DashboardPage> {
                                     Color(hexColor('#AC0087')),
                                   ]),
                                 ),
-                                child: Icon(FontAwesomeIcons.globe, color: Colors.white, size: 30,),
+                                child: Icon(
+                                  FontAwesomeIcons.globe,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
                                 height: 70,
                                 width: 70,
                                 //color: Colors.red,
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('Web')
                             ],
                           ),
@@ -800,7 +885,11 @@ class _DashboardPageState extends State<DashboardPage> {
                           Column(
                             children: [
                               Container(
-                                child: Icon(FontAwesomeIcons.flag, color: Colors.white, size: 30,),
+                                child: Icon(
+                                  FontAwesomeIcons.flag,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(40),
                                   gradient: LinearGradient(colors: [
@@ -812,7 +901,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                 width: 70,
                                 //color: Colors.red,
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('Page')
                             ],
                           ),
@@ -822,7 +913,11 @@ class _DashboardPageState extends State<DashboardPage> {
                           Column(
                             children: [
                               Container(
-                                child: Icon(FontAwesomeIcons.facebook,color: Colors.white, size: 30,),
+                                child: Icon(
+                                  FontAwesomeIcons.facebook,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(40),
                                   gradient: LinearGradient(colors: [
@@ -834,7 +929,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                 width: 70,
                                 //color: Colors.red,
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('Facebook')
                             ],
                           ),
@@ -859,9 +956,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                 height: 70,
                                 width: 70,
                                 //color: Colors.red,
-                                child: Icon(FontAwesomeIcons.linkedin, color: Colors.white, size: 30),
+                                child: Icon(FontAwesomeIcons.linkedin,
+                                    color: Colors.white, size: 30),
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('Linkedin')
                             ],
                           ),
@@ -871,7 +971,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Column(
                             children: [
                               Container(
-                                child: Icon(FontAwesomeIcons.youtube, size: 30, color: Colors.white),
+                                child: Icon(FontAwesomeIcons.youtube,
+                                    size: 30, color: Colors.white),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   gradient: LinearGradient(colors: [
@@ -883,7 +984,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                 width: 70,
                                 //color: Colors.red,
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('YouTube')
                             ],
                           ),
@@ -893,7 +996,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Column(
                             children: [
                               Container(
-                                child: Icon(FontAwesomeIcons.instagram, color: Colors.white, size: 30),
+                                child: Icon(FontAwesomeIcons.instagram,
+                                    color: Colors.white, size: 30),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   gradient: LinearGradient(colors: [
@@ -905,7 +1009,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                 width: 70,
                                 //color: Colors.red,
                               ),
-                              SizedBox(height: 05,),
+                              SizedBox(
+                                height: 05,
+                              ),
                               Text('Instagram')
                             ],
                           ),
@@ -987,7 +1093,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                 padding: const EdgeInsets.only(top: 25),
                                 child: Row(
                                   children: [
-                                    Image.asset('images/police.png',
+                                    Image.asset(
+                                      'images/police.png',
                                       cacheHeight: 60,
                                       cacheWidth: 60,
                                       alignment: Alignment.centerLeft,
@@ -995,10 +1102,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
-                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
-                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                          Text('Assistent Director',
+                                              style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway',
+                                              style: TextStyle(fontSize: 12)),
                                         ],
                                       ),
                                     ),
@@ -1020,7 +1130,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 47),
-                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                      child: ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Applied')),
                                     )
                                   ],
                                 ),
@@ -1053,7 +1165,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                 padding: const EdgeInsets.only(top: 25),
                                 child: Row(
                                   children: [
-                                    Image.asset('images/police.png',
+                                    Image.asset(
+                                      'images/police.png',
                                       cacheHeight: 60,
                                       cacheWidth: 60,
                                       alignment: Alignment.centerLeft,
@@ -1061,10 +1174,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
-                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
-                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                          Text('Assistent Director',
+                                              style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway',
+                                              style: TextStyle(fontSize: 12)),
                                         ],
                                       ),
                                     ),
@@ -1086,7 +1202,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 47),
-                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                      child: ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Applied')),
                                     )
                                   ],
                                 ),
@@ -1119,7 +1237,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                 padding: const EdgeInsets.only(top: 25),
                                 child: Row(
                                   children: [
-                                    Image.asset('images/police.png',
+                                    Image.asset(
+                                      'images/police.png',
                                       cacheHeight: 60,
                                       cacheWidth: 60,
                                       alignment: Alignment.centerLeft,
@@ -1127,10 +1246,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
-                                          Text('Assistent Director', style: TextStyle(fontSize: 12)),
-                                          Text('Minuestry of Railway', style: TextStyle(fontSize: 12)),
+                                          Text('Assistent Director',
+                                              style: TextStyle(fontSize: 12)),
+                                          Text('Minuestry of Railway',
+                                              style: TextStyle(fontSize: 12)),
                                         ],
                                       ),
                                     ),
@@ -1152,7 +1274,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 47),
-                                      child: ElevatedButton(onPressed: () {}, child: Text('Applied')),
+                                      child: ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Applied')),
                                     )
                                   ],
                                 ),
@@ -1173,17 +1297,30 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 10,
-            // ),
-            // SizedBox(
-            //   height: 10,
-            // ),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.transparent,
+            )
           ],
         ),
       ),
     );
   }
+
+  // List<IconData> listOfIcons = [
+  //   Icons.home_rounded,
+  //   Icons.favorite_rounded,
+  //   Icons.settings_rounded,
+  //   Icons.person_rounded,
+  // ];
+  //
+  // List<String> listOfStrings = [
+  //   'Home',
+  //   'Favorite',
+  //   'Settings',
+  //   'Account',
+  // ];
   int hexColor(String color) {
     String newColor = '0xff' + color;
     newColor = newColor.replaceAll('#', '');
