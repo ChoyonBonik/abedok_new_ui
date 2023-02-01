@@ -467,7 +467,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/working1.png'),
+                                image: AssetImage('images/whats_new1.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -482,7 +482,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/working2.png'),
+                                image: AssetImage('images/whats_new2.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -497,7 +497,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/working3.png'),
+                                image: AssetImage('images/whats_new3.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -512,7 +512,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/working4.png'),
+                                image: AssetImage('images/whats_new4.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
