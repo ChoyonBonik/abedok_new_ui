@@ -76,9 +76,9 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
         ),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(50.0),
+          preferredSize: Size.fromHeight(40.0),
           child: Container(
-            padding: EdgeInsets.only(left: 20, bottom: 20),
+            padding: EdgeInsets.only(left: 20, bottom: 15),
             child: Row(
               children: [
                 Stack(
@@ -94,7 +94,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Container(
                   margin: EdgeInsets.only(
                     left: 10,
-                    top: 15,
+                    top: 10,
                   ),
                   child: Row(
                     children: [
@@ -140,7 +140,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               onPressed: () {},
                               icon: Icon(
                                 Icons.search,
-                                size: 35,
+                                size: 30,
                                 color: Colors.white,
                               )),
                           IconButton(
@@ -148,7 +148,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               icon: Icon(
                                 Icons.notifications_none_rounded,
                                 color: Colors.white,
-                                size: 35,
+                                size: 30,
                               )),
                         ],
                       )
@@ -165,7 +165,7 @@ class _DashboardPageState extends State<DashboardPage> {
           children: [
             //Services...........................................................
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(15),
               child: Column(
                 children: [
                   Row(
