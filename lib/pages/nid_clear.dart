@@ -12,10 +12,10 @@ class _NidClearState extends State<NidClear> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Nid Clearence'),
+        title: Text('Nid Clearence Page'),
       ),
       body: Center(
-        child: Text('Nid Clearence'),
+        child: Text('Nid Clearence Page'),
       ),
     );
   }

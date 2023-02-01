@@ -13,11 +13,11 @@ class _GovtJobState extends State<GovtJob> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Government Job'),
+        title: Text('Government Job Page'),
         centerTitle: true,
       ),
       body: Center(
-        child: Text('Government Job'),
+        child: Text('Government Job Page'),
       )
     );
   }

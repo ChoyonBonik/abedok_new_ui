@@ -12,10 +12,10 @@ class _PoliceClearState extends State<PoliceClear> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Police Clearence'),
+        title: Text('Police Clearence Page'),
       ),
       body: Center(
-        child: Text('Police Clearence'),
+        child: Text('Police Clearence Page'),
       ),
     );
   }
