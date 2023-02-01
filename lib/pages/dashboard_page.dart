@@ -5,8 +5,6 @@ import 'package:abedok_new_ui/pages/passport.dart';
 import 'package:abedok_new_ui/pages/general_diary.dart';
 import 'package:abedok_new_ui/pages/admission.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -18,13 +16,12 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //BottomNavigationBar...
+      //BottomNavigationBar........................................................
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(
+        padding: EdgeInsets.only(
           right: 30,
           left: 30,
         ),
@@ -38,8 +35,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 onTabChange: (value) {
                   print(value);
                 },
-                tabBackgroundGradient: LinearGradient(
-                    colors: [
+                tabBackgroundGradient: LinearGradient(colors: [
                   Color(hexColor('#E90D65')),
                   Color(hexColor('#AC0087')),
                 ]),
@@ -64,18 +60,18 @@ class _DashboardPageState extends State<DashboardPage> {
                     text: 'Settings',
                   ),
                 ],
-              )
-          ),
+              )),
         ),
       ),
-      //AppBar....
+      //AppBar................................................................
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color(hexColor('#E90D65')),
-              Color(hexColor('#AC0087')),
-            ],
+            gradient: LinearGradient(
+              colors: [
+                Color(hexColor('#E90D65')),
+                Color(hexColor('#AC0087')),
+              ],
             ),
           ),
         ),
@@ -90,7 +86,8 @@ class _DashboardPageState extends State<DashboardPage> {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: Colors.white,
-                      backgroundImage: AssetImage('images/appbar_circle_image.png'),
+                      backgroundImage:
+                          AssetImage('images/appbar_circle_image.png'),
                     ),
                   ],
                 ),
@@ -166,7 +163,7 @@ class _DashboardPageState extends State<DashboardPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //Services.....
+            //Services...........................................................
             Container(
               margin: EdgeInsets.all(10),
               child: Column(
@@ -176,22 +173,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/govt.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text('Government Job', maxLines: 2, textAlign: TextAlign.center, )
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -203,6 +184,26 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/govt.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Government Job',
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -219,22 +220,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/police.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text('Police Clearence', maxLines: 2, textAlign: TextAlign.center,)
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -246,6 +231,26 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/police.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Police Clearence',
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -262,22 +267,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/nid.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text('Nid   Clearnece', maxLines: 2, textAlign: TextAlign.center,)
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -289,6 +278,26 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/nid.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Nid   Clearnece',
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -309,22 +318,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/passport.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text('Passport')
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -336,6 +329,22 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/passport.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text('Passport')
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -352,22 +361,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/police.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text('General Diary', maxLines: 2, textAlign: TextAlign.center,)
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -379,6 +372,26 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/police.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  'General Diary',
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -395,22 +408,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       Expanded(
                         child: InkWell(
                           child: Container(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/admission.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text('Admission')
-                              ],
-                            ),
                             width: 111,
                             height: 166,
                             decoration: BoxDecoration(
@@ -422,6 +419,22 @@ class _DashboardPageState extends State<DashboardPage> {
                               ],
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(15.0),
+                                  child: Image.asset(
+                                    'images/admission.png',
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text('Admission')
+                              ],
                             ),
                           ),
                           onTap: () {
@@ -440,9 +453,9 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            //Whats New?.....
+            //Whats New?.......................................................
             Padding(
-              padding: const EdgeInsets.only(right: 220),
+              padding: EdgeInsets.only(right: 220),
               child: Text("Whats New?",
                   style: TextStyle(
                     fontSize: 20,
@@ -452,7 +465,7 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            Container(
+            SizedBox(
                 height: 200,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -524,9 +537,9 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 20,
             ),
-            //Invite Friend......
+            //Invite Friend.....................................................
             Padding(
-              padding: const EdgeInsets.only(right: 40),
+              padding: EdgeInsets.only(right: 40),
               child: Text("Invite Friends & Get Discount",
                   style: TextStyle(
                     fontSize: 20,
@@ -536,7 +549,7 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            Container(
+            SizedBox(
                 height: 400,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -548,6 +561,16 @@ class _DashboardPageState extends State<DashboardPage> {
                           padding: EdgeInsets.all(10),
                           height: 400,
                           width: 250,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 1.0,
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),
                           child: Column(
                             children: [
                               Image(
@@ -593,7 +616,9 @@ class _DashboardPageState extends State<DashboardPage> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('F03ERO', style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text('F03ERO',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
                                     InkWell(
                                       child: Icon(Icons.copy),
                                       onTap: () {},
@@ -635,6 +660,15 @@ class _DashboardPageState extends State<DashboardPage> {
                               )
                             ],
                           ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
+                          height: 400,
+                          width: 250,
                           decoration: BoxDecoration(
                             boxShadow: [
                               BoxShadow(
@@ -647,15 +681,6 @@ class _DashboardPageState extends State<DashboardPage> {
 
                             //image: DecorationImage(image: AssetImage('images/1.png'),),
                           ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(10),
-                          height: 400,
-                          width: 250,
                           child: Column(
                             children: [
                               Image(
@@ -699,9 +724,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                                 child: Row(
                                   mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('F03ERO', style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text('F03ERO',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
                                     InkWell(
                                       child: Icon(Icons.copy),
                                       onTap: () {},
@@ -714,7 +741,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   ElevatedButton(
                                       onPressed: () {},
@@ -743,6 +770,15 @@ class _DashboardPageState extends State<DashboardPage> {
                               )
                             ],
                           ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
+                          height: 400,
+                          width: 250,
                           decoration: BoxDecoration(
                             boxShadow: [
                               BoxShadow(
@@ -755,15 +791,6 @@ class _DashboardPageState extends State<DashboardPage> {
 
                             //image: DecorationImage(image: AssetImage('images/1.png'),),
                           ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(10),
-                          height: 400,
-                          width: 250,
                           child: Column(
                             children: [
                               Image(
@@ -807,9 +834,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                                 child: Row(
                                   mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('F03ERO', style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text('F03ERO',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
                                     InkWell(
                                       child: Icon(Icons.copy),
                                       onTap: () {},
@@ -822,7 +851,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   ElevatedButton(
                                       onPressed: () {},
@@ -850,18 +879,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ],
                               )
                             ],
-                          ),
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 1.0,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.white,
-
-                            //image: DecorationImage(image: AssetImage('images/1.png'),),
                           ),
                         ),
                         onTap: () {},
@@ -872,9 +889,9 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            //Explore.....
+            //Explore.........................................................
             Padding(
-              padding: const EdgeInsets.only(right: 270),
+              padding: EdgeInsets.only(right: 270),
               child: Text("Explore >",
                   style: TextStyle(
                     fontSize: 20,
@@ -883,10 +900,13 @@ class _DashboardPageState extends State<DashboardPage> {
                   )),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: Container(
+                height: 260,
+                width: double.infinity,
+                color: Colors.transparent,
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -894,86 +914,95 @@ class _DashboardPageState extends State<DashboardPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  child: Icon(
+                                    FontAwesomeIcons.globe,
+                                    color: Colors.white,
+                                    size: 30,
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
                                 ),
-                                child: Icon(
-                                  FontAwesomeIcons.globe,
-                                  color: Colors.white,
-                                  size: 30,
+                                SizedBox(
+                                  height: 05,
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('Web')
-                            ],
+                                Text('Web')
+                              ],
+                            ),
                           ),
                           SizedBox(
                             width: 50,
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                child: Icon(
-                                  FontAwesomeIcons.flag,
-                                  color: Colors.white,
-                                  size: 30,
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    FontAwesomeIcons.flag,
+                                    color: Colors.white,
+                                    size: 30,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
                                 ),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                                SizedBox(
+                                  height: 05,
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('Page')
-                            ],
+                                Text('Page')
+                              ],
+                            ),
                           ),
                           SizedBox(
                             width: 50,
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                child: Icon(
-                                  FontAwesomeIcons.facebook,
-                                  color: Colors.white,
-                                  size: 30,
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    FontAwesomeIcons.facebook,
+                                    color: Colors.white,
+                                    size: 30,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
                                 ),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                                SizedBox(
+                                  height: 05,
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('Facebook')
-                            ],
+                                Text('Facebook')
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -983,91 +1012,97 @@ class _DashboardPageState extends State<DashboardPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
+                                  child: Icon(FontAwesomeIcons.linkedin,
+                                      color: Colors.white, size: 30),
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                                child: Icon(FontAwesomeIcons.linkedin,
-                                    color: Colors.white, size: 30),
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('Linkedin')
-                            ],
+                                SizedBox(
+                                  height: 05,
+                                ),
+                                Text('Linkedin')
+                              ],
+                            ),
                           ),
                           SizedBox(
                             width: 50,
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                child: Icon(FontAwesomeIcons.youtube,
-                                    size: 30, color: Colors.white),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  child: Icon(FontAwesomeIcons.youtube,
+                                      size: 30, color: Colors.white),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('YouTube')
-                            ],
+                                SizedBox(
+                                  height: 05,
+                                ),
+                                Text('YouTube')
+                              ],
+                            ),
                           ),
                           SizedBox(
                             width: 50,
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                child: Icon(FontAwesomeIcons.instagram,
-                                    color: Colors.white, size: 30),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  gradient: LinearGradient(colors: [
-                                    Color(hexColor('#E90D65')),
-                                    Color(hexColor('#AC0087')),
-                                  ]),
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  child: Icon(FontAwesomeIcons.instagram,
+                                      color: Colors.white, size: 30),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    gradient: LinearGradient(colors: [
+                                      Color(hexColor('#E90D65')),
+                                      Color(hexColor('#AC0087')),
+                                    ]),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
                                 ),
-                                height: 70,
-                                width: 70,
-                                //color: Colors.red,
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text('Instagram')
-                            ],
+                                SizedBox(
+                                  height: 05,
+                                ),
+                                Text('Instagram')
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ],
                   ),
                 ),
-                height: 260,
-                width: double.infinity,
-                color: Colors.transparent,
               ),
             ),
-            //Services provide
+            //Services provide..................................................
             Padding(
-              padding: const EdgeInsets.only(right: 100),
+              padding: EdgeInsets.only(right: 100),
               child: Text("Service you have Taken",
                   style: TextStyle(
                     fontSize: 20,
@@ -1077,241 +1112,239 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            Container(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 180),
-                                child: Text('10-12-2000'),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(color: Colors.grey.shade300),
+                      ),
+                      height: 200,
+                      width: 300,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 180),
+                              child: Text('10-12-2000'),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    'images/police.png',
+                                    cacheHeight: 60,
+                                    cacheWidth: 60,
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('Assistent Director',
+                                            style: TextStyle(fontSize: 12)),
+                                        Text('Bangladesh Police',
+                                            style: TextStyle(fontSize: 12)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Image.asset(
-                                      'images/police.png',
-                                      cacheHeight: 60,
-                                      cacheWidth: 60,
-                                      alignment: Alignment.centerLeft,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text('Assistent Director',
-                                              style: TextStyle(fontSize: 12)),
-                                          Text('Bangladesh Police',
-                                              style: TextStyle(fontSize: 12)),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 05),
-                                      child: Text('Grade-5'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 40),
-                                      child: Text('\$500'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 45),
-                                      child: ElevatedButton(
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 05),
+                                    child: Text('Grade-5'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 40),
+                                    child: Text('\$500'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 45),
+                                    child: ElevatedButton(
                                         style: ElevatedButton.styleFrom(
                                           primary: Colors.pink,
                                           onPrimary: Colors.white,
                                         ),
-                                          onPressed: () {},
-                                          child: Text('Applied')),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          border: Border.all(color: Colors.grey.shade300),
-                        ),
-                        height: 200,
-                        width: 300,
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 180),
-                                child: Text('10-12-2000'),
+                                        onPressed: () {},
+                                        child: Text('Applied')),
+                                  )
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Image.asset(
-                                      'images/police.png',
-                                      cacheHeight: 60,
-                                      cacheWidth: 60,
-                                      alignment: Alignment.centerLeft,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Text('Assistent Director',
-                                              style: TextStyle(fontSize: 12)),
-                                          Text('Bangladesh Police',
-                                              style: TextStyle(fontSize: 12)),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 05),
-                                      child: Text('Grade-5'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 40),
-                                      child: Text('\$500'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 45),
-                                      child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            primary: Colors.pink,
-                                            onPrimary: Colors.white,
-                                          ),
-                                          onPressed: () {},
-                                          child: Text('Applied')),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          border: Border.all(color: Colors.grey.shade300),
-                        ),
-                        height: 200,
-                        width: 300,
                       ),
-                      SizedBox(
-                        width: 15,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(color: Colors.grey.shade300),
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 180),
-                                child: Text('10-12-2000'),
+                      height: 200,
+                      width: 300,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 180),
+                              child: Text('10-12-2000'),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    'images/police.png',
+                                    cacheHeight: 60,
+                                    cacheWidth: 60,
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('Assistent Director',
+                                            style: TextStyle(fontSize: 12)),
+                                        Text('Bangladesh Police',
+                                            style: TextStyle(fontSize: 12)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Image.asset(
-                                      'images/police.png',
-                                      cacheHeight: 60,
-                                      cacheWidth: 60,
-                                      alignment: Alignment.centerLeft,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: [
-                                          Text('Assistent Director',
-                                              style: TextStyle(fontSize: 12)),
-                                          Text('Bangladesh Police',
-                                              style: TextStyle(fontSize: 12)),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 05),
+                                    child: Text('Grade-5'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 40),
+                                    child: Text('\$500'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 45),
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.pink,
+                                          onPrimary: Colors.white,
+                                        ),
+                                        onPressed: () {},
+                                        child: Text('Applied')),
+                                  )
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 05),
-                                      child: Text('Grade-5'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 40),
-                                      child: Text('\$500'),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 45),
-                                      child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            primary: Colors.pink,
-                                            onPrimary: Colors.white,
-                                          ),
-                                          onPressed: () {},
-                                          child: Text('Applied')),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          border: Border.all(color: Colors.grey.shade300),
-                        ),
-                        height: 200,
-                        width: 300,
                       ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 180),
+                              child: Text('10-12-2000'),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    'images/police.png',
+                                    cacheHeight: 60,
+                                    cacheWidth: 60,
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('Assistent Director',
+                                            style: TextStyle(fontSize: 12)),
+                                        Text('Bangladesh Police',
+                                            style: TextStyle(fontSize: 12)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 25),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 05),
+                                    child: Text('Grade-5'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 40),
+                                    child: Text('\$500'),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 45),
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.pink,
+                                          onPrimary: Colors.white,
+                                        ),
+                                        onPressed: () {},
+                                        child: Text('Applied')),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(color: Colors.grey.shade300),
+                      ),
+                      height: 200,
+                      width: 300,
+                    ),
+                  ],
                 ),
               ),
             ),
-            //White Container...
+            //White Container......................................
             Container(
               height: 100,
               width: double.infinity,
@@ -1322,7 +1355,8 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
     );
   }
-  //Gradiant Color.....
+
+  //Gradiant Color.............................................................
   int hexColor(String color) {
     String newColor = '0xff' + color;
     newColor = newColor.replaceAll('#', '');
