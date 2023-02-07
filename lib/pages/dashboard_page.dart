@@ -36,10 +36,10 @@ class _DashboardPageState extends State<DashboardPage> {
                   print(value);
                 },
                 tabBackgroundGradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xffe90d65), Color(0xffac0087)],
-              ),
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xffe90d65), Color(0xffac0087)],
+                ),
                 gap: 8,
                 padding: EdgeInsets.all(10),
                 tabMargin: EdgeInsets.all(10),
@@ -923,7 +923,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   child: Icon(
@@ -960,7 +963,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   height: 70,
@@ -992,7 +998,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   height: 70,
@@ -1026,7 +1035,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   height: 70,
@@ -1053,7 +1065,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   height: 70,
@@ -1084,7 +1099,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     gradient: const LinearGradient(
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
-                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      colors: [
+                                        Color(0xffe90d65),
+                                        Color(0xffac0087)
+                                      ],
                                     ),
                                   ),
                                   height: 70,
@@ -1129,16 +1147,17 @@ class _DashboardPageState extends State<DashboardPage> {
                       margin: EdgeInsets.only(bottom: 20),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color:Color(0xFFF4CDE4),
+                          color: Color(0xFFF4CDE4),
                           width: 1,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       child: InkWell(
                         splashColor: const Color(0xffffd6e8),
-                        onTap: (){},
+                        onTap: () {},
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 14),
                           child: Column(
                             children: [
                               Row(
@@ -1156,7 +1175,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                       ), //vacancy
                                       style: TextButton.styleFrom(
                                         primary: const Color(0xFFC80677),
-                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                        backgroundColor: const Color(
+                                            0xFFFAE6F1), // foreground
                                       ),
                                       onPressed: () {},
                                     ),
@@ -1165,39 +1185,43 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               Row(
                                 children: [
-                              CircleAvatar(
-                              backgroundColor: Colors.grey.shade50,
-                                radius: 30,
-                                backgroundImage: AssetImage('images/govt.png'),
-                              ),
+                                  CircleAvatar(
+                                    backgroundColor: Colors.grey.shade50,
+                                    radius: 30,
+                                    backgroundImage:
+                                        AssetImage('images/govt.png'),
+                                  ),
                                   SizedBox(width: 12),
                                   Column(
                                     children: [
                                       SizedBox(
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
                                           'Generator Operator',
-                                          maxLines:  2,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.w500,
+                                            fontWeight: FontWeight.w500,
                                             color: Colors.black,
-                                            fontSize:15,
+                                            fontSize: 15,
                                           ),
                                         ),
                                       ),
-
                                       Container(
                                         margin: const EdgeInsets.only(top: 4),
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
-                                         "Karnaphuli Gas Distribution Company Limited",
-                                          maxLines:  2,
+                                          "Karnaphuli Gas Distribution Company Limited",
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.normal,
+                                            fontWeight: FontWeight.normal,
                                             color: Colors.black,
-                                            fontSize:12,
+                                            fontSize: 12,
                                           ),
                                         ),
                                       ),
@@ -1207,11 +1231,12 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Grade 5" ,
+                                    "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
                                         color: Colors.black,
@@ -1232,12 +1257,16 @@ class _DashboardPageState extends State<DashboardPage> {
                                       gradient: const LinearGradient(
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter,
-                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
                                       ),
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.grey,
-                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          offset:
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
@@ -1274,16 +1303,17 @@ class _DashboardPageState extends State<DashboardPage> {
                       margin: EdgeInsets.only(bottom: 20),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color:Color(0xFFF4CDE4),
+                          color: Color(0xFFF4CDE4),
                           width: 1,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       child: InkWell(
                         splashColor: const Color(0xffffd6e8),
-                        onTap: (){},
+                        onTap: () {},
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 14),
                           child: Column(
                             children: [
                               Row(
@@ -1301,7 +1331,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                       ), //vacancy
                                       style: TextButton.styleFrom(
                                         primary: const Color(0xFFC80677),
-                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                        backgroundColor: const Color(
+                                            0xFFFAE6F1), // foreground
                                       ),
                                       onPressed: () {},
                                     ),
@@ -1313,36 +1344,40 @@ class _DashboardPageState extends State<DashboardPage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.grey.shade50,
                                     radius: 30,
-                                    backgroundImage: AssetImage('images/govt.png'),
+                                    backgroundImage:
+                                        AssetImage('images/govt.png'),
                                   ),
                                   SizedBox(width: 12),
                                   Column(
                                     children: [
                                       SizedBox(
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
                                           'Generator Operator',
-                                          maxLines:  2,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.w500,
+                                            fontWeight: FontWeight.w500,
                                             color: Colors.black,
-                                            fontSize:15,
+                                            fontSize: 15,
                                           ),
                                         ),
                                       ),
-
                                       Container(
                                         margin: const EdgeInsets.only(top: 4),
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
                                           "Karnaphuli Gas Distribution Company Limited",
-                                          maxLines:  2,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.normal,
+                                            fontWeight: FontWeight.normal,
                                             color: Colors.black,
-                                            fontSize:12,
+                                            fontSize: 12,
                                           ),
                                         ),
                                       ),
@@ -1352,11 +1387,12 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Grade 5" ,
+                                    "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
                                         color: Colors.black,
@@ -1377,12 +1413,16 @@ class _DashboardPageState extends State<DashboardPage> {
                                       gradient: const LinearGradient(
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter,
-                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
                                       ),
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.grey,
-                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          offset:
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
@@ -1419,16 +1459,17 @@ class _DashboardPageState extends State<DashboardPage> {
                       margin: EdgeInsets.only(bottom: 20),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color:Color(0xFFF4CDE4),
+                          color: Color(0xFFF4CDE4),
                           width: 1,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       child: InkWell(
                         splashColor: const Color(0xffffd6e8),
-                        onTap: (){},
+                        onTap: () {},
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 14),
                           child: Column(
                             children: [
                               Row(
@@ -1446,7 +1487,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                       ), //vacancy
                                       style: TextButton.styleFrom(
                                         primary: const Color(0xFFC80677),
-                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                        backgroundColor: const Color(
+                                            0xFFFAE6F1), // foreground
                                       ),
                                       onPressed: () {},
                                     ),
@@ -1458,36 +1500,40 @@ class _DashboardPageState extends State<DashboardPage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.grey.shade50,
                                     radius: 30,
-                                    backgroundImage: AssetImage('images/govt.png'),
+                                    backgroundImage:
+                                        AssetImage('images/govt.png'),
                                   ),
                                   SizedBox(width: 12),
                                   Column(
                                     children: [
                                       SizedBox(
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
                                           'Generator Operator',
-                                          maxLines:  2,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.w500,
+                                            fontWeight: FontWeight.w500,
                                             color: Colors.black,
-                                            fontSize:15,
+                                            fontSize: 15,
                                           ),
                                         ),
                                       ),
-
                                       Container(
                                         margin: const EdgeInsets.only(top: 4),
-                                        width: MediaQuery.of(context).size.width - 200,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                200,
                                         child: Text(
                                           "Karnaphuli Gas Distribution Company Limited",
-                                          maxLines:  2,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontWeight:  FontWeight.normal,
+                                            fontWeight: FontWeight.normal,
                                             color: Colors.black,
-                                            fontSize:12,
+                                            fontSize: 12,
                                           ),
                                         ),
                                       ),
@@ -1497,11 +1543,12 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Grade 5" ,
+                                    "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
                                         color: Colors.black,
@@ -1522,12 +1569,16 @@ class _DashboardPageState extends State<DashboardPage> {
                                       gradient: const LinearGradient(
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter,
-                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
                                       ),
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.grey,
-                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          offset:
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
