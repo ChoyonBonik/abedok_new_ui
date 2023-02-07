@@ -39,6 +39,7 @@ dependencies:
   font_awesome_flutter:
 #  salomon_bottom_bar: ^3.3.1
   google_nav_bar: ^5.0.6
+  flutter_screenutil:
 
 dev_dependencies:
   flutter_test:

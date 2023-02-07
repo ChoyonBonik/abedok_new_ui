@@ -35,10 +35,11 @@ class _DashboardPageState extends State<DashboardPage> {
                 onTabChange: (value) {
                   print(value);
                 },
-                tabBackgroundGradient: LinearGradient(colors: [
-                  Color(hexColor('#E90D65')),
-                  Color(hexColor('#AC0087')),
-                ]),
+                tabBackgroundGradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xffe90d65), Color(0xffac0087)],
+              ),
                 gap: 8,
                 padding: EdgeInsets.all(10),
                 tabMargin: EdgeInsets.all(10),
@@ -67,11 +68,10 @@ class _DashboardPageState extends State<DashboardPage> {
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(hexColor('#E90D65')),
-                Color(hexColor('#AC0087')),
-              ],
+            gradient: const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xffe90d65), Color(0xffac0087)],
             ),
           ),
         ),
@@ -237,7 +237,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Image.asset(
-                                    'images/police.png',
+                                    'images/admission.png',
                                     height: 80,
                                     width: 80,
                                   ),
@@ -246,7 +246,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                   height: 5,
                                 ),
                                 Text(
-                                  'Police Clearence',
+                                  'University Admission',
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                 )
@@ -284,7 +284,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Image.asset(
-                                    'images/nid.png',
+                                    'images/police.png',
                                     height: 80,
                                     width: 80,
                                   ),
@@ -293,7 +293,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                   height: 5,
                                 ),
                                 Text(
-                                  'Nid   Clearnece',
+                                  'Police Clearence',
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                 )
@@ -310,143 +310,141 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          child: Container(
-                            width: 111,
-                            height: 166,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1.0,
-                                  color: Colors.grey,
-                                ),
-                              ],
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/passport.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text('Passport')
-                              ],
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Passport()));
-                          },
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: InkWell(
-                          child: Container(
-                            width: 111,
-                            height: 166,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1.0,
-                                  color: Colors.grey,
-                                ),
-                              ],
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/police.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  'General Diary',
-                                  maxLines: 2,
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => GeneralDiary()));
-                          },
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: InkWell(
-                          child: Container(
-                            width: 111,
-                            height: 166,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1.0,
-                                  color: Colors.grey,
-                                ),
-                              ],
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(15.0),
-                                  child: Image.asset(
-                                    'images/admission.png',
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text('Admission')
-                              ],
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => admission()));
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
+                  //others pages..........
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: InkWell(
+                  //         child: Container(
+                  //           width: 111,
+                  //           height: 166,
+                  //           decoration: BoxDecoration(
+                  //             boxShadow: [
+                  //               BoxShadow(
+                  //                 blurRadius: 1.0,
+                  //                 color: Colors.grey,
+                  //               ),
+                  //             ],
+                  //             color: Colors.white,
+                  //             borderRadius: BorderRadius.circular(10),
+                  //           ),
+                  //           child: Column(
+                  //             children: [
+                  //               Padding(
+                  //                 padding: EdgeInsets.all(15.0),
+                  //                 child: Image.asset(
+                  //                   'images/passport.png',
+                  //                   height: 80,
+                  //                   width: 80,
+                  //                 ),
+                  //               ),
+                  //               SizedBox(
+                  //                 height: 20,
+                  //               ),
+                  //               Text('Passport')
+                  //             ],
+                  //           ),
+                  //         ),
+                  //         onTap: () {
+                  //           Navigator.push(
+                  //               context,
+                  //               MaterialPageRoute(
+                  //                   builder: (context) => Passport()));
+                  //         },
+                  //       ),
+                  //     ),
+                  //     SizedBox(
+                  //       width: 15,
+                  //     ),
+                  //     Expanded(
+                  //       child: InkWell(
+                  //         child: Container(
+                  //           width: 111,
+                  //           height: 166,
+                  //           decoration: BoxDecoration(
+                  //             boxShadow: [
+                  //               BoxShadow(
+                  //                 blurRadius: 1.0,
+                  //                 color: Colors.grey,
+                  //               ),
+                  //             ],
+                  //             color: Colors.white,
+                  //             borderRadius: BorderRadius.circular(10),
+                  //           ),
+                  //           child: Column(
+                  //             children: [
+                  //               Padding(
+                  //                 padding: EdgeInsets.all(15.0),
+                  //                 child: Image.asset(
+                  //                   'images/police.png',
+                  //                   height: 80,
+                  //                   width: 80,
+                  //                 ),
+                  //               ),
+                  //               SizedBox(
+                  //                 height: 20,
+                  //               ),
+                  //               Text(
+                  //                 'General Diary',
+                  //                 maxLines: 2,
+                  //                 textAlign: TextAlign.center,
+                  //               )
+                  //             ],
+                  //           ),
+                  //         ),
+                  //         onTap: () {
+                  //           Navigator.push(
+                  //               context,
+                  //               MaterialPageRoute(
+                  //                   builder: (context) => GeneralDiary()));
+                  //         },
+                  //       ),
+                  //     ),
+                  //     SizedBox(
+                  //       width: 15,
+                  //     ),
+                  //     Expanded(
+                  //       child: InkWell(
+                  //         child: Container(
+                  //           width: 111,
+                  //           height: 166,
+                  //           decoration: BoxDecoration(
+                  //             boxShadow: [
+                  //               BoxShadow(
+                  //                 blurRadius: 1.0,
+                  //                 color: Colors.grey,
+                  //               ),
+                  //             ],
+                  //             color: Colors.white,
+                  //             borderRadius: BorderRadius.circular(10),
+                  //           ),
+                  //           child: Column(
+                  //             children: [
+                  //               Padding(
+                  //                 padding: EdgeInsets.all(15.0),
+                  //                 child: Image.asset(
+                  //                   'images/admission.png',
+                  //                   height: 80,
+                  //                   width: 80,
+                  //                 ),
+                  //               ),
+                  //               SizedBox(
+                  //                 height: 20,
+                  //               ),
+                  //               Text('Admission')
+                  //             ],
+                  //           ),
+                  //         ),
+                  //         onTap: () {
+                  //           Navigator.push(
+                  //               context,
+                  //               MaterialPageRoute(
+                  //                   builder: (context) => admission()));
+                  //         },
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               ),
             ),
@@ -537,358 +535,359 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 20,
             ),
-            //Invite Friend.....................................................
-            Padding(
-              padding: EdgeInsets.only(right: 40),
-              child: Text("Invite Friends & Get Discount",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-                height: 400,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(10),
-                          height: 400,
-                          width: 250,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 1.0,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.white,
-                          ),
-                          child: Column(
-                            children: [
-                              Image(
-                                  image: AssetImage('images/invite.png'),
-                                  height: 80,
-                                  width: 80),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Invite On Ride                ',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text(
-                                'Share this code with two of your friends & family members. They can...',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Share this code             ',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(5),
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.grey.shade100,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('F03ERO',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
-                                    InkWell(
-                                      child: Icon(Icons.copy),
-                                      onTap: () {},
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                          fixedSize: Size(100, 20),
-                                          primary: Colors.white,
-                                          onPrimary: Colors.pink,
-                                          side: BorderSide(
-                                            color: Colors.pink,
-                                          )),
-                                      child: Text(
-                                        'Invite',
-                                        style: TextStyle(
-                                          color: Colors.pink,
-                                        ),
-                                      )),
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        fixedSize: Size(100, 20),
-                                        primary: Colors.pink,
-                                        onPrimary: Colors.white,
-                                      ),
-                                      child: Text('Details')),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(10),
-                          height: 400,
-                          width: 250,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 1.0,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.white,
-
-                            //image: DecorationImage(image: AssetImage('images/1.png'),),
-                          ),
-                          child: Column(
-                            children: [
-                              Image(
-                                  image: AssetImage('images/invite.png'),
-                                  height: 80,
-                                  width: 80),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Invite On Ride                ',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text(
-                                'Share this code with two of your friends & family members. They can...',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Share this code             ',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(5),
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.grey.shade100,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('F03ERO',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
-                                    InkWell(
-                                      child: Icon(Icons.copy),
-                                      onTap: () {},
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                          fixedSize: Size(100, 20),
-                                          primary: Colors.white,
-                                          onPrimary: Colors.pink,
-                                          side: BorderSide(
-                                            color: Colors.pink,
-                                          )),
-                                      child: Text(
-                                        'Invite',
-                                        style: TextStyle(
-                                          color: Colors.pink,
-                                        ),
-                                      )),
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        fixedSize: Size(100, 20),
-                                        primary: Colors.pink,
-                                        onPrimary: Colors.white,
-                                      ),
-                                      child: Text('Details')),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(10),
-                          height: 400,
-                          width: 250,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 1.0,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.white,
-
-                            //image: DecorationImage(image: AssetImage('images/1.png'),),
-                          ),
-                          child: Column(
-                            children: [
-                              Image(
-                                  image: AssetImage('images/invite.png'),
-                                  height: 80,
-                                  width: 80),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Invite On Ride                ',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              SizedBox(
-                                height: 05,
-                              ),
-                              Text(
-                                'Share this code with two of your friends & family members. They can...',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Share this code             ',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(5),
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.grey.shade100,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('F03ERO',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
-                                    InkWell(
-                                      child: Icon(Icons.copy),
-                                      onTap: () {},
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                          fixedSize: Size(100, 20),
-                                          primary: Colors.white,
-                                          onPrimary: Colors.pink,
-                                          side: BorderSide(
-                                            color: Colors.pink,
-                                          )),
-                                      child: Text(
-                                        'Invite',
-                                        style: TextStyle(
-                                          color: Colors.pink,
-                                        ),
-                                      )),
-                                  ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        fixedSize: Size(100, 20),
-                                        primary: Colors.pink,
-                                        onPrimary: Colors.white,
-                                      ),
-                                      child: Text('Details')),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                    ],
-                  ),
-                )),
-            SizedBox(
-              height: 10,
-            ),
+            //invite friends...............
+            // Padding(
+            //   padding: EdgeInsets.only(right: 40),
+            //   child: Text("Invite Friends & Get Discount",
+            //       style: TextStyle(
+            //         fontSize: 20,
+            //         fontWeight: FontWeight.bold,
+            //       )),
+            // ),
+            // SizedBox(
+            //   height: 10,
+            // ),
+            // SizedBox(
+            //     height: 400,
+            //     child: SingleChildScrollView(
+            //       scrollDirection: Axis.horizontal,
+            //       child: Row(
+            //         children: [
+            //           InkWell(
+            //             child: Container(
+            //               margin: EdgeInsets.all(10),
+            //               padding: EdgeInsets.all(10),
+            //               height: 400,
+            //               width: 250,
+            //               decoration: BoxDecoration(
+            //                 boxShadow: [
+            //                   BoxShadow(
+            //                     color: Colors.grey,
+            //                     blurRadius: 1.0,
+            //                   ),
+            //                 ],
+            //                 borderRadius: BorderRadius.circular(15),
+            //                 color: Colors.white,
+            //               ),
+            //               child: Column(
+            //                 children: [
+            //                   Image(
+            //                       image: AssetImage('images/invite.png'),
+            //                       height: 80,
+            //                       width: 80),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Invite On Ride                ',
+            //                     style: TextStyle(fontSize: 20),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 05,
+            //                   ),
+            //                   Text(
+            //                     'Share this code with two of your friends & family members. They can...',
+            //                     style: TextStyle(
+            //                       fontSize: 15,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Share this code             ',
+            //                     style: TextStyle(
+            //                       fontSize: 18,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Container(
+            //                     padding: EdgeInsets.all(5),
+            //                     height: 40,
+            //                     decoration: BoxDecoration(
+            //                       borderRadius: BorderRadius.circular(5),
+            //                       color: Colors.grey.shade100,
+            //                     ),
+            //                     child: Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text('F03ERO',
+            //                             style: TextStyle(
+            //                                 fontWeight: FontWeight.bold)),
+            //                         InkWell(
+            //                           child: Icon(Icons.copy),
+            //                           onTap: () {},
+            //                         ),
+            //                       ],
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Row(
+            //                     mainAxisAlignment:
+            //                         MainAxisAlignment.spaceBetween,
+            //                     children: [
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                               fixedSize: Size(100, 20),
+            //                               primary: Colors.white,
+            //                               onPrimary: Colors.pink,
+            //                               side: BorderSide(
+            //                                 color: Colors.pink,
+            //                               )),
+            //                           child: Text(
+            //                             'Invite',
+            //                             style: TextStyle(
+            //                               color: Colors.pink,
+            //                             ),
+            //                           )),
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                             fixedSize: Size(100, 20),
+            //                             primary: Colors.pink,
+            //                             onPrimary: Colors.white,
+            //                           ),
+            //                           child: Text('Details')),
+            //                     ],
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             onTap: () {},
+            //           ),
+            //           InkWell(
+            //             child: Container(
+            //               margin: EdgeInsets.all(10),
+            //               padding: EdgeInsets.all(10),
+            //               height: 400,
+            //               width: 250,
+            //               decoration: BoxDecoration(
+            //                 boxShadow: [
+            //                   BoxShadow(
+            //                     color: Colors.grey,
+            //                     blurRadius: 1.0,
+            //                   ),
+            //                 ],
+            //                 borderRadius: BorderRadius.circular(15),
+            //                 color: Colors.white,
+            //
+            //                 //image: DecorationImage(image: AssetImage('images/1.png'),),
+            //               ),
+            //               child: Column(
+            //                 children: [
+            //                   Image(
+            //                       image: AssetImage('images/invite.png'),
+            //                       height: 80,
+            //                       width: 80),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Invite On Ride                ',
+            //                     style: TextStyle(fontSize: 20),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 05,
+            //                   ),
+            //                   Text(
+            //                     'Share this code with two of your friends & family members. They can...',
+            //                     style: TextStyle(
+            //                       fontSize: 15,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Share this code             ',
+            //                     style: TextStyle(
+            //                       fontSize: 18,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Container(
+            //                     padding: EdgeInsets.all(5),
+            //                     height: 40,
+            //                     decoration: BoxDecoration(
+            //                       borderRadius: BorderRadius.circular(5),
+            //                       color: Colors.grey.shade100,
+            //                     ),
+            //                     child: Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text('F03ERO',
+            //                             style: TextStyle(
+            //                                 fontWeight: FontWeight.bold)),
+            //                         InkWell(
+            //                           child: Icon(Icons.copy),
+            //                           onTap: () {},
+            //                         ),
+            //                       ],
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Row(
+            //                     mainAxisAlignment:
+            //                         MainAxisAlignment.spaceBetween,
+            //                     children: [
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                               fixedSize: Size(100, 20),
+            //                               primary: Colors.white,
+            //                               onPrimary: Colors.pink,
+            //                               side: BorderSide(
+            //                                 color: Colors.pink,
+            //                               )),
+            //                           child: Text(
+            //                             'Invite',
+            //                             style: TextStyle(
+            //                               color: Colors.pink,
+            //                             ),
+            //                           )),
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                             fixedSize: Size(100, 20),
+            //                             primary: Colors.pink,
+            //                             onPrimary: Colors.white,
+            //                           ),
+            //                           child: Text('Details')),
+            //                     ],
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             onTap: () {},
+            //           ),
+            //           InkWell(
+            //             child: Container(
+            //               margin: EdgeInsets.all(10),
+            //               padding: EdgeInsets.all(10),
+            //               height: 400,
+            //               width: 250,
+            //               decoration: BoxDecoration(
+            //                 boxShadow: [
+            //                   BoxShadow(
+            //                     color: Colors.grey,
+            //                     blurRadius: 1.0,
+            //                   ),
+            //                 ],
+            //                 borderRadius: BorderRadius.circular(15),
+            //                 color: Colors.white,
+            //
+            //                 //image: DecorationImage(image: AssetImage('images/1.png'),),
+            //               ),
+            //               child: Column(
+            //                 children: [
+            //                   Image(
+            //                       image: AssetImage('images/invite.png'),
+            //                       height: 80,
+            //                       width: 80),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Invite On Ride                ',
+            //                     style: TextStyle(fontSize: 20),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 05,
+            //                   ),
+            //                   Text(
+            //                     'Share this code with two of your friends & family members. They can...',
+            //                     style: TextStyle(
+            //                       fontSize: 15,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 20,
+            //                   ),
+            //                   Text(
+            //                     'Share this code             ',
+            //                     style: TextStyle(
+            //                       fontSize: 18,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Container(
+            //                     padding: EdgeInsets.all(5),
+            //                     height: 40,
+            //                     decoration: BoxDecoration(
+            //                       borderRadius: BorderRadius.circular(5),
+            //                       color: Colors.grey.shade100,
+            //                     ),
+            //                     child: Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text('F03ERO',
+            //                             style: TextStyle(
+            //                                 fontWeight: FontWeight.bold)),
+            //                         InkWell(
+            //                           child: Icon(Icons.copy),
+            //                           onTap: () {},
+            //                         ),
+            //                       ],
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: 10,
+            //                   ),
+            //                   Row(
+            //                     mainAxisAlignment:
+            //                         MainAxisAlignment.spaceBetween,
+            //                     children: [
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                               fixedSize: Size(100, 20),
+            //                               primary: Colors.white,
+            //                               onPrimary: Colors.pink,
+            //                               side: BorderSide(
+            //                                 color: Colors.pink,
+            //                               )),
+            //                           child: Text(
+            //                             'Invite',
+            //                             style: TextStyle(
+            //                               color: Colors.pink,
+            //                             ),
+            //                           )),
+            //                       ElevatedButton(
+            //                           onPressed: () {},
+            //                           style: ElevatedButton.styleFrom(
+            //                             fixedSize: Size(100, 20),
+            //                             primary: Colors.pink,
+            //                             onPrimary: Colors.white,
+            //                           ),
+            //                           child: Text('Details')),
+            //                     ],
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             onTap: () {},
+            //           ),
+            //         ],
+            //       ),
+            //     )),
+            // SizedBox(
+            //   height: 10,
+            // ),
+            //Explore.........................................................
             //Explore.........................................................
             Padding(
               padding: EdgeInsets.only(right: 270),
@@ -896,7 +895,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.pink,
+                    color: Colors.black,
                   )),
             ),
             Padding(
@@ -921,10 +920,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(40),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
                                   ),
                                   child: Icon(
                                     FontAwesomeIcons.globe,
@@ -957,10 +957,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                   ),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(40),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
                                   ),
                                   height: 70,
                                   width: 70,
@@ -982,16 +983,17 @@ class _DashboardPageState extends State<DashboardPage> {
                               children: [
                                 Container(
                                   child: Icon(
-                                    FontAwesomeIcons.facebook,
+                                    FontAwesomeIcons.userGroup,
                                     color: Colors.white,
-                                    size: 30,
+                                    size: 25,
                                   ),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(40),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
                                   ),
                                   height: 70,
                                   width: 70,
@@ -1000,7 +1002,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Facebook')
+                                Text('Group')
                               ],
                             ),
                           ),
@@ -1017,12 +1019,42 @@ class _DashboardPageState extends State<DashboardPage> {
                             child: Column(
                               children: [
                                 Container(
+                                  child: Icon(FontAwesomeIcons.youtube,
+                                      size: 30, color: Colors.white),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
+                                  ),
+                                  height: 70,
+                                  width: 70,
+                                  //color: Colors.red,
+                                ),
+                                SizedBox(
+                                  height: 05,
+                                ),
+                                Text('YouTube')
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
                                   ),
                                   height: 70,
                                   width: 70,
@@ -1045,42 +1077,15 @@ class _DashboardPageState extends State<DashboardPage> {
                             child: Column(
                               children: [
                                 Container(
-                                  child: Icon(FontAwesomeIcons.youtube,
-                                      size: 30, color: Colors.white),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
-                                  ),
-                                  height: 70,
-                                  width: 70,
-                                  //color: Colors.red,
-                                ),
-                                SizedBox(
-                                  height: 05,
-                                ),
-                                Text('YouTube')
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          InkWell(
-                            onTap: () {},
-                            child: Column(
-                              children: [
-                                Container(
                                   child: Icon(FontAwesomeIcons.instagram,
                                       color: Colors.white, size: 30),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
-                                    gradient: LinearGradient(colors: [
-                                      Color(hexColor('#E90D65')),
-                                      Color(hexColor('#AC0087')),
-                                    ]),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                    ),
                                   ),
                                   height: 70,
                                   width: 70,
@@ -1119,74 +1124,144 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Row(
                   children: [
                     Container(
+                      width: 320,
+                      // height: 200.h,
+                      margin: EdgeInsets.only(bottom: 20),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        border: Border.all(color: Colors.grey.shade300),
+                        border: Border.all(
+                          color:Color(0xFFF4CDE4),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
-                      height: 200,
-                      width: 300,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 180),
-                              child: Text('10-12-2000'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                      child: InkWell(
+                        splashColor: const Color(0xffffd6e8),
+                        onTap: (){},
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset(
-                                    'images/police.png',
-                                    cacheHeight: 60,
-                                    cacheWidth: 60,
-                                    alignment: Alignment.centerLeft,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Assistent Director',
-                                            style: TextStyle(fontSize: 12)),
-                                        Text('Bangladesh Police',
-                                            style: TextStyle(fontSize: 12)),
-                                      ],
+                                  SizedBox(
+                                    width: 75,
+                                    height: 36,
+                                    child: TextButton.icon(
+                                      icon: Image.asset('images/ic_person.png',
+                                          height: 16, width: 16),
+                                      label: Text(
+                                        '01',
+                                        style: TextStyle(fontSize: 13),
+                                      ), //vacancy
+                                      style: TextButton.styleFrom(
+                                        primary: const Color(0xFFC80677),
+                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                      ),
+                                      onPressed: () {},
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                              Row(
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 05),
-                                    child: Text('Grade-5'),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 40),
-                                    child: Text('\$500'),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 45),
-                                    child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.pink,
-                                          onPrimary: Colors.white,
+                              CircleAvatar(
+                              backgroundColor: Colors.grey.shade50,
+                                radius: 30,
+                                backgroundImage: AssetImage('images/govt.png'),
+                              ),
+                                  SizedBox(width: 12),
+                                  Column(
+                                    children: [
+                                      SizedBox(
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                          'Generator Operator',
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.w500,
+                                            color: Colors.black,
+                                            fontSize:15,
+                                          ),
                                         ),
-                                        onPressed: () {},
-                                        child: Text('Applied')),
+                                      ),
+
+                                      Container(
+                                        margin: const EdgeInsets.only(top: 4),
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                         "Karnaphuli Gas Distribution Company Limited",
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.normal,
+                                            color: Colors.black,
+                                            fontSize:12,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   )
                                 ],
                               ),
-                            )
-                          ],
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Grade 5" ,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Text(
+                                    '৳ 100',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Container(
+                                    width: 85,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Apply',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -1194,74 +1269,144 @@ class _DashboardPageState extends State<DashboardPage> {
                       width: 15,
                     ),
                     Container(
+                      width: 320,
+                      // height: 200.h,
+                      margin: EdgeInsets.only(bottom: 20),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        border: Border.all(color: Colors.grey.shade300),
+                        border: Border.all(
+                          color:Color(0xFFF4CDE4),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
-                      height: 200,
-                      width: 300,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 180),
-                              child: Text('10-12-2000'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                      child: InkWell(
+                        splashColor: const Color(0xffffd6e8),
+                        onTap: (){},
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset(
-                                    'images/police.png',
-                                    cacheHeight: 60,
-                                    cacheWidth: 60,
-                                    alignment: Alignment.centerLeft,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Assistent Director',
-                                            style: TextStyle(fontSize: 12)),
-                                        Text('Bangladesh Police',
-                                            style: TextStyle(fontSize: 12)),
-                                      ],
+                                  SizedBox(
+                                    width: 75,
+                                    height: 36,
+                                    child: TextButton.icon(
+                                      icon: Image.asset('images/ic_person.png',
+                                          height: 16, width: 16),
+                                      label: Text(
+                                        '01',
+                                        style: TextStyle(fontSize: 13),
+                                      ), //vacancy
+                                      style: TextButton.styleFrom(
+                                        primary: const Color(0xFFC80677),
+                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                      ),
+                                      onPressed: () {},
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                              Row(
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 05),
-                                    child: Text('Grade-5'),
+                                  CircleAvatar(
+                                    backgroundColor: Colors.grey.shade50,
+                                    radius: 30,
+                                    backgroundImage: AssetImage('images/govt.png'),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 40),
-                                    child: Text('\$500'),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 45),
-                                    child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.pink,
-                                          onPrimary: Colors.white,
+                                  SizedBox(width: 12),
+                                  Column(
+                                    children: [
+                                      SizedBox(
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                          'Generator Operator',
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.w500,
+                                            color: Colors.black,
+                                            fontSize:15,
+                                          ),
                                         ),
-                                        onPressed: () {},
-                                        child: Text('Applied')),
+                                      ),
+
+                                      Container(
+                                        margin: const EdgeInsets.only(top: 4),
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                          "Karnaphuli Gas Distribution Company Limited",
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.normal,
+                                            color: Colors.black,
+                                            fontSize:12,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   )
                                 ],
                               ),
-                            )
-                          ],
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Grade 5" ,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Text(
+                                    '৳ 100',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Container(
+                                    width: 85,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Apply',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -1269,98 +1414,157 @@ class _DashboardPageState extends State<DashboardPage> {
                       width: 15,
                     ),
                     Container(
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 180),
-                              child: Text('10-12-2000'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                      width: 320,
+                      // height: 200.h,
+                      margin: EdgeInsets.only(bottom: 20),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color:Color(0xFFF4CDE4),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      child: InkWell(
+                        splashColor: const Color(0xffffd6e8),
+                        onTap: (){},
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset(
-                                    'images/police.png',
-                                    cacheHeight: 60,
-                                    cacheWidth: 60,
-                                    alignment: Alignment.centerLeft,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Assistent Director',
-                                            style: TextStyle(fontSize: 12)),
-                                        Text('Bangladesh Police',
-                                            style: TextStyle(fontSize: 12)),
-                                      ],
+                                  SizedBox(
+                                    width: 75,
+                                    height: 36,
+                                    child: TextButton.icon(
+                                      icon: Image.asset('images/ic_person.png',
+                                          height: 16, width: 16),
+                                      label: Text(
+                                        '01',
+                                        style: TextStyle(fontSize: 13),
+                                      ), //vacancy
+                                      style: TextButton.styleFrom(
+                                        primary: const Color(0xFFC80677),
+                                        backgroundColor: const Color(0xFFFAE6F1), // foreground
+                                      ),
+                                      onPressed: () {},
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Row(
+                              Row(
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 05),
-                                    child: Text('Grade-5'),
+                                  CircleAvatar(
+                                    backgroundColor: Colors.grey.shade50,
+                                    radius: 30,
+                                    backgroundImage: AssetImage('images/govt.png'),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 40),
-                                    child: Text('\$500'),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 45),
-                                    child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.pink,
-                                          onPrimary: Colors.white,
+                                  SizedBox(width: 12),
+                                  Column(
+                                    children: [
+                                      SizedBox(
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                          'Generator Operator',
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.w500,
+                                            color: Colors.black,
+                                            fontSize:15,
+                                          ),
                                         ),
-                                        onPressed: () {},
-                                        child: Text('Applied')),
+                                      ),
+
+                                      Container(
+                                        margin: const EdgeInsets.only(top: 4),
+                                        width: MediaQuery.of(context).size.width - 200,
+                                        child: Text(
+                                          "Karnaphuli Gas Distribution Company Limited",
+                                          maxLines:  2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontWeight:  FontWeight.normal,
+                                            color: Colors.black,
+                                            fontSize:12,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   )
                                 ],
                               ),
-                            )
-                          ],
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Grade 5" ,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Text(
+                                    '৳ 100',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        color: Colors.black,
+                                        fontSize: 16),
+                                  ),
+                                  Container(
+                                    width: 85,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [Color(0xffe90d65), Color(0xffac0087)],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset: const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Apply',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        border: Border.all(color: Colors.grey.shade300),
-                      ),
-                      height: 200,
-                      width: 300,
                     ),
                   ],
                 ),
               ),
             ),
-            //White Container......................................
-            Container(
+            SizedBox(
               height: 100,
-              width: double.infinity,
-              color: Colors.transparent,
-            )
+            ),
           ],
         ),
       ),
     );
-  }
-
-  //Gradiant Color.............................................................
-  int hexColor(String color) {
-    String newColor = '0xff' + color;
-    newColor = newColor.replaceAll('#', '');
-    int finalColor = int.parse(newColor);
-    return finalColor;
   }
 }
