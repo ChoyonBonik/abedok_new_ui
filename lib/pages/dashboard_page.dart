@@ -19,6 +19,82 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //AppBar................................................................
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(70),
+        child:
+        AppBar(
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xffe90d65),
+                  Color(0xffac0087),
+                ],
+              ),
+            ),
+          ),
+          leadingWidth: 70,
+          titleSpacing: 0,
+          leading: Padding(
+            padding: const EdgeInsets.only(top:18, left: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundImage: AssetImage('images/circle.jpg'),
+                ),
+              ],
+            ),
+          ),
+          title: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: InkWell(
+              onTap: () {},
+              child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Khairul Inslam',
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "01700000000",
+                          style: TextStyle(
+                            fontSize: 11,
+                          ),
+                        ),
+                        Icon(Icons.keyboard_arrow_down),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  IconButton(icon: Icon(Icons.search_rounded), onPressed: () {}),
+                  IconButton(icon: Icon(Icons.notifications_none_outlined), onPressed: () {}),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
       //BottomNavigationBar........................................................
       bottomNavigationBar: Padding(
         padding: EdgeInsets.only(
@@ -62,102 +138,6 @@ class _DashboardPageState extends State<DashboardPage> {
                   ),
                 ],
               )),
-        ),
-      ),
-      //AppBar................................................................
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xffe90d65), Color(0xffac0087)],
-            ),
-          ),
-        ),
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(40.0),
-          child: Container(
-            padding: EdgeInsets.only(left: 20, bottom: 15),
-            child: Row(
-              children: [
-                Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.white,
-                      backgroundImage:
-                          AssetImage('images/appbar_circle_image.png'),
-                    ),
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 10,
-                    top: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Khairul Islam',
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white),
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                '01746586222',
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.keyboard_arrow_down_sharp,
-                                    color: Colors.white,
-                                    size: 30,
-                                  ))
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        width: 50,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.search,
-                                size: 30,
-                                color: Colors.white,
-                              )),
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_none_rounded,
-                                color: Colors.white,
-                                size: 30,
-                              )),
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
         ),
       ),
       body: SingleChildScrollView(
