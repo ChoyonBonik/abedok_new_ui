@@ -315,96 +315,6 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 10,
             ),
-            //Whats New?.......................................................
-            Padding(
-              padding: EdgeInsets.only(right: 270),
-              child: Text("Whats New?",
-                  style: TextStyle(
-                    fontFamily: 'Poppins-Medium.ttf',
-                    fontSize: 14,
-                    color: textColor,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-                height: 200,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue,
-                            image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new1.jpg'),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue,
-                            image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new2.jpg'),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue,
-                            image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new3.jpg'),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue,
-                            image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new4.jpg'),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                    ],
-                  ),
-                )),
-            SizedBox(
-              height: 20,
-            ),
             //CV Builder..............................................
             Padding(
               padding: EdgeInsets.only(right: 290),
@@ -443,9 +353,9 @@ class _DashboardPageState extends State<DashboardPage> {
                           child: Column(
                             children: [
                               Image(
-                                  image: AssetImage('assets/images/cvv.jpg'),
-                                  height: 200,
-                                  width: double.infinity,
+                                image: AssetImage('assets/images/cvv.jpg'),
+                                height: 200,
+                                width: double.infinity,
                                 fit: BoxFit.cover,
 
                               ),
@@ -667,7 +577,96 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 20,
             ),
-
+            //Whats New?.......................................................
+            Padding(
+              padding: EdgeInsets.only(right: 270),
+              child: Text("Whats New?",
+                  style: TextStyle(
+                    fontFamily: 'Poppins-Medium.ttf',
+                    fontSize: 14,
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+                height: 200,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/whats_new1.jpg'),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/whats_new2.jpg'),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/whats_new3.jpg'),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/whats_new4.jpg'),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                )),
+            SizedBox(
+              height: 20,
+            ),
             //Explore.........................................................
             Padding(
               padding: EdgeInsets.only(right: 290),
