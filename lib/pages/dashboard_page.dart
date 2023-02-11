@@ -1,9 +1,8 @@
 import 'package:abedok_new_ui/pages/govt_job.dart';
 import 'package:abedok_new_ui/pages/police_clear.dart';
-import 'package:abedok_new_ui/pages/nid_clear.dart';
-import 'package:abedok_new_ui/pages/passport.dart';
-import 'package:abedok_new_ui/pages/general_diary.dart';
 import 'package:abedok_new_ui/pages/admission.dart';
+import 'package:abedok_new_ui/utils/constants.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -22,8 +21,7 @@ class _DashboardPageState extends State<DashboardPage> {
       //AppBar................................................................
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
-        child:
-        AppBar(
+        child: AppBar(
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -39,13 +37,13 @@ class _DashboardPageState extends State<DashboardPage> {
           leadingWidth: 70,
           titleSpacing: 0,
           leading: Padding(
-            padding: const EdgeInsets.only(top:18, left: 10),
+            padding: const EdgeInsets.only(top: 18, left: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 20,
-                  backgroundImage: AssetImage('images/circle.jpg'),
+                  backgroundImage: AssetImage('assets/images/circle.jpg'),
                 ),
               ],
             ),
@@ -62,6 +60,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     Text(
                       'Khairul Inslam',
                       style: TextStyle(
+                        fontFamily: 'Poppins-Regular.ttf',
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
@@ -71,6 +70,7 @@ class _DashboardPageState extends State<DashboardPage> {
                         Text(
                           "01700000000",
                           style: TextStyle(
+                            fontFamily: 'Poppins-Regular.ttf',
                             fontSize: 11,
                           ),
                         ),
@@ -87,8 +87,11 @@ class _DashboardPageState extends State<DashboardPage> {
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
-                  IconButton(icon: Icon(Icons.search_rounded), onPressed: () {}),
-                  IconButton(icon: Icon(Icons.notifications_none_outlined), onPressed: () {}),
+                  IconButton(
+                      icon: Icon(Icons.search_rounded), onPressed: () {}),
+                  IconButton(
+                      icon: Icon(Icons.notifications_none_outlined),
+                      onPressed: () {}),
                 ],
               ),
             )
@@ -145,6 +148,7 @@ class _DashboardPageState extends State<DashboardPage> {
           children: [
             //Services...........................................................
             Container(
+              padding: EdgeInsets.only(top: 10),
               margin: EdgeInsets.all(15),
               child: Column(
                 children: [
@@ -170,7 +174,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Image.asset(
-                                    'images/govt.png',
+                                    'assets/images/govt-logo.png',
                                     height: 80,
                                     width: 80,
                                   ),
@@ -180,6 +184,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                                 Text(
                                   'Government Job',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    color: textColor,
+                                  ),
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                 )
@@ -217,7 +226,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Image.asset(
-                                    'images/admission.png',
+                                    'assets/images/admission.png',
                                     height: 80,
                                     width: 80,
                                   ),
@@ -227,6 +236,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                                 Text(
                                   'University Admission',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                 )
@@ -237,7 +251,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PoliceClear()));
+                                    builder: (context) => AdmissionPage()));
                           },
                         ),
                       ),
@@ -264,7 +278,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Image.asset(
-                                    'images/police.png',
+                                    'assets/images/police.png',
                                     height: 80,
                                     width: 80,
                                   ),
@@ -274,6 +288,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                                 Text(
                                   'Police Clearence',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontFamily: 'Poppins-Medium',
+                                    color: textColor,
+                                  ),
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                 )
@@ -284,147 +303,12 @@ class _DashboardPageState extends State<DashboardPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => NidClear()));
+                                    builder: (context) => PoliceClear()));
                           },
                         ),
                       ),
                     ],
                   ),
-                  //others pages..........
-                  // Row(
-                  //   children: [
-                  //     Expanded(
-                  //       child: InkWell(
-                  //         child: Container(
-                  //           width: 111,
-                  //           height: 166,
-                  //           decoration: BoxDecoration(
-                  //             boxShadow: [
-                  //               BoxShadow(
-                  //                 blurRadius: 1.0,
-                  //                 color: Colors.grey,
-                  //               ),
-                  //             ],
-                  //             color: Colors.white,
-                  //             borderRadius: BorderRadius.circular(10),
-                  //           ),
-                  //           child: Column(
-                  //             children: [
-                  //               Padding(
-                  //                 padding: EdgeInsets.all(15.0),
-                  //                 child: Image.asset(
-                  //                   'images/passport.png',
-                  //                   height: 80,
-                  //                   width: 80,
-                  //                 ),
-                  //               ),
-                  //               SizedBox(
-                  //                 height: 20,
-                  //               ),
-                  //               Text('Passport')
-                  //             ],
-                  //           ),
-                  //         ),
-                  //         onTap: () {
-                  //           Navigator.push(
-                  //               context,
-                  //               MaterialPageRoute(
-                  //                   builder: (context) => Passport()));
-                  //         },
-                  //       ),
-                  //     ),
-                  //     SizedBox(
-                  //       width: 15,
-                  //     ),
-                  //     Expanded(
-                  //       child: InkWell(
-                  //         child: Container(
-                  //           width: 111,
-                  //           height: 166,
-                  //           decoration: BoxDecoration(
-                  //             boxShadow: [
-                  //               BoxShadow(
-                  //                 blurRadius: 1.0,
-                  //                 color: Colors.grey,
-                  //               ),
-                  //             ],
-                  //             color: Colors.white,
-                  //             borderRadius: BorderRadius.circular(10),
-                  //           ),
-                  //           child: Column(
-                  //             children: [
-                  //               Padding(
-                  //                 padding: EdgeInsets.all(15.0),
-                  //                 child: Image.asset(
-                  //                   'images/police.png',
-                  //                   height: 80,
-                  //                   width: 80,
-                  //                 ),
-                  //               ),
-                  //               SizedBox(
-                  //                 height: 20,
-                  //               ),
-                  //               Text(
-                  //                 'General Diary',
-                  //                 maxLines: 2,
-                  //                 textAlign: TextAlign.center,
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //         onTap: () {
-                  //           Navigator.push(
-                  //               context,
-                  //               MaterialPageRoute(
-                  //                   builder: (context) => GeneralDiary()));
-                  //         },
-                  //       ),
-                  //     ),
-                  //     SizedBox(
-                  //       width: 15,
-                  //     ),
-                  //     Expanded(
-                  //       child: InkWell(
-                  //         child: Container(
-                  //           width: 111,
-                  //           height: 166,
-                  //           decoration: BoxDecoration(
-                  //             boxShadow: [
-                  //               BoxShadow(
-                  //                 blurRadius: 1.0,
-                  //                 color: Colors.grey,
-                  //               ),
-                  //             ],
-                  //             color: Colors.white,
-                  //             borderRadius: BorderRadius.circular(10),
-                  //           ),
-                  //           child: Column(
-                  //             children: [
-                  //               Padding(
-                  //                 padding: EdgeInsets.all(15.0),
-                  //                 child: Image.asset(
-                  //                   'images/admission.png',
-                  //                   height: 80,
-                  //                   width: 80,
-                  //                 ),
-                  //               ),
-                  //               SizedBox(
-                  //                 height: 20,
-                  //               ),
-                  //               Text('Admission')
-                  //             ],
-                  //           ),
-                  //         ),
-                  //         onTap: () {
-                  //           Navigator.push(
-                  //               context,
-                  //               MaterialPageRoute(
-                  //                   builder: (context) => admission()));
-                  //         },
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                 ],
               ),
             ),
@@ -433,10 +317,12 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             //Whats New?.......................................................
             Padding(
-              padding: EdgeInsets.only(right: 220),
+              padding: EdgeInsets.only(right: 270),
               child: Text("Whats New?",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontFamily: 'Poppins-Medium.ttf',
+                    fontSize: 14,
+                    color: textColor,
                     fontWeight: FontWeight.bold,
                   )),
             ),
@@ -458,7 +344,8 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/whats_new1.jpg'),
+                                image:
+                                    AssetImage('assets/images/whats_new1.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -473,7 +360,8 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/whats_new2.jpg'),
+                                image:
+                                    AssetImage('assets/images/whats_new2.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -488,7 +376,8 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/whats_new3.jpg'),
+                                image:
+                                    AssetImage('assets/images/whats_new3.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -503,7 +392,8 @@ class _DashboardPageState extends State<DashboardPage> {
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image: AssetImage('images/whats_new4.jpg'),
+                                image:
+                                    AssetImage('assets/images/whats_new4.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -515,373 +405,286 @@ class _DashboardPageState extends State<DashboardPage> {
             SizedBox(
               height: 20,
             ),
-            //invite friends...............
-            // Padding(
-            //   padding: EdgeInsets.only(right: 40),
-            //   child: Text("Invite Friends & Get Discount",
-            //       style: TextStyle(
-            //         fontSize: 20,
-            //         fontWeight: FontWeight.bold,
-            //       )),
-            // ),
-            // SizedBox(
-            //   height: 10,
-            // ),
-            // SizedBox(
-            //     height: 400,
-            //     child: SingleChildScrollView(
-            //       scrollDirection: Axis.horizontal,
-            //       child: Row(
-            //         children: [
-            //           InkWell(
-            //             child: Container(
-            //               margin: EdgeInsets.all(10),
-            //               padding: EdgeInsets.all(10),
-            //               height: 400,
-            //               width: 250,
-            //               decoration: BoxDecoration(
-            //                 boxShadow: [
-            //                   BoxShadow(
-            //                     color: Colors.grey,
-            //                     blurRadius: 1.0,
-            //                   ),
-            //                 ],
-            //                 borderRadius: BorderRadius.circular(15),
-            //                 color: Colors.white,
-            //               ),
-            //               child: Column(
-            //                 children: [
-            //                   Image(
-            //                       image: AssetImage('images/invite.png'),
-            //                       height: 80,
-            //                       width: 80),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Invite On Ride                ',
-            //                     style: TextStyle(fontSize: 20),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 05,
-            //                   ),
-            //                   Text(
-            //                     'Share this code with two of your friends & family members. They can...',
-            //                     style: TextStyle(
-            //                       fontSize: 15,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Share this code             ',
-            //                     style: TextStyle(
-            //                       fontSize: 18,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Container(
-            //                     padding: EdgeInsets.all(5),
-            //                     height: 40,
-            //                     decoration: BoxDecoration(
-            //                       borderRadius: BorderRadius.circular(5),
-            //                       color: Colors.grey.shade100,
-            //                     ),
-            //                     child: Row(
-            //                       mainAxisAlignment:
-            //                           MainAxisAlignment.spaceBetween,
-            //                       children: [
-            //                         Text('F03ERO',
-            //                             style: TextStyle(
-            //                                 fontWeight: FontWeight.bold)),
-            //                         InkWell(
-            //                           child: Icon(Icons.copy),
-            //                           onTap: () {},
-            //                         ),
-            //                       ],
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Row(
-            //                     mainAxisAlignment:
-            //                         MainAxisAlignment.spaceBetween,
-            //                     children: [
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                               fixedSize: Size(100, 20),
-            //                               primary: Colors.white,
-            //                               onPrimary: Colors.pink,
-            //                               side: BorderSide(
-            //                                 color: Colors.pink,
-            //                               )),
-            //                           child: Text(
-            //                             'Invite',
-            //                             style: TextStyle(
-            //                               color: Colors.pink,
-            //                             ),
-            //                           )),
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                             fixedSize: Size(100, 20),
-            //                             primary: Colors.pink,
-            //                             onPrimary: Colors.white,
-            //                           ),
-            //                           child: Text('Details')),
-            //                     ],
-            //                   )
-            //                 ],
-            //               ),
-            //             ),
-            //             onTap: () {},
-            //           ),
-            //           InkWell(
-            //             child: Container(
-            //               margin: EdgeInsets.all(10),
-            //               padding: EdgeInsets.all(10),
-            //               height: 400,
-            //               width: 250,
-            //               decoration: BoxDecoration(
-            //                 boxShadow: [
-            //                   BoxShadow(
-            //                     color: Colors.grey,
-            //                     blurRadius: 1.0,
-            //                   ),
-            //                 ],
-            //                 borderRadius: BorderRadius.circular(15),
-            //                 color: Colors.white,
-            //
-            //                 //image: DecorationImage(image: AssetImage('images/1.png'),),
-            //               ),
-            //               child: Column(
-            //                 children: [
-            //                   Image(
-            //                       image: AssetImage('images/invite.png'),
-            //                       height: 80,
-            //                       width: 80),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Invite On Ride                ',
-            //                     style: TextStyle(fontSize: 20),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 05,
-            //                   ),
-            //                   Text(
-            //                     'Share this code with two of your friends & family members. They can...',
-            //                     style: TextStyle(
-            //                       fontSize: 15,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Share this code             ',
-            //                     style: TextStyle(
-            //                       fontSize: 18,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Container(
-            //                     padding: EdgeInsets.all(5),
-            //                     height: 40,
-            //                     decoration: BoxDecoration(
-            //                       borderRadius: BorderRadius.circular(5),
-            //                       color: Colors.grey.shade100,
-            //                     ),
-            //                     child: Row(
-            //                       mainAxisAlignment:
-            //                           MainAxisAlignment.spaceBetween,
-            //                       children: [
-            //                         Text('F03ERO',
-            //                             style: TextStyle(
-            //                                 fontWeight: FontWeight.bold)),
-            //                         InkWell(
-            //                           child: Icon(Icons.copy),
-            //                           onTap: () {},
-            //                         ),
-            //                       ],
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Row(
-            //                     mainAxisAlignment:
-            //                         MainAxisAlignment.spaceBetween,
-            //                     children: [
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                               fixedSize: Size(100, 20),
-            //                               primary: Colors.white,
-            //                               onPrimary: Colors.pink,
-            //                               side: BorderSide(
-            //                                 color: Colors.pink,
-            //                               )),
-            //                           child: Text(
-            //                             'Invite',
-            //                             style: TextStyle(
-            //                               color: Colors.pink,
-            //                             ),
-            //                           )),
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                             fixedSize: Size(100, 20),
-            //                             primary: Colors.pink,
-            //                             onPrimary: Colors.white,
-            //                           ),
-            //                           child: Text('Details')),
-            //                     ],
-            //                   )
-            //                 ],
-            //               ),
-            //             ),
-            //             onTap: () {},
-            //           ),
-            //           InkWell(
-            //             child: Container(
-            //               margin: EdgeInsets.all(10),
-            //               padding: EdgeInsets.all(10),
-            //               height: 400,
-            //               width: 250,
-            //               decoration: BoxDecoration(
-            //                 boxShadow: [
-            //                   BoxShadow(
-            //                     color: Colors.grey,
-            //                     blurRadius: 1.0,
-            //                   ),
-            //                 ],
-            //                 borderRadius: BorderRadius.circular(15),
-            //                 color: Colors.white,
-            //
-            //                 //image: DecorationImage(image: AssetImage('images/1.png'),),
-            //               ),
-            //               child: Column(
-            //                 children: [
-            //                   Image(
-            //                       image: AssetImage('images/invite.png'),
-            //                       height: 80,
-            //                       width: 80),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Invite On Ride                ',
-            //                     style: TextStyle(fontSize: 20),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 05,
-            //                   ),
-            //                   Text(
-            //                     'Share this code with two of your friends & family members. They can...',
-            //                     style: TextStyle(
-            //                       fontSize: 15,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 20,
-            //                   ),
-            //                   Text(
-            //                     'Share this code             ',
-            //                     style: TextStyle(
-            //                       fontSize: 18,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Container(
-            //                     padding: EdgeInsets.all(5),
-            //                     height: 40,
-            //                     decoration: BoxDecoration(
-            //                       borderRadius: BorderRadius.circular(5),
-            //                       color: Colors.grey.shade100,
-            //                     ),
-            //                     child: Row(
-            //                       mainAxisAlignment:
-            //                           MainAxisAlignment.spaceBetween,
-            //                       children: [
-            //                         Text('F03ERO',
-            //                             style: TextStyle(
-            //                                 fontWeight: FontWeight.bold)),
-            //                         InkWell(
-            //                           child: Icon(Icons.copy),
-            //                           onTap: () {},
-            //                         ),
-            //                       ],
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     height: 10,
-            //                   ),
-            //                   Row(
-            //                     mainAxisAlignment:
-            //                         MainAxisAlignment.spaceBetween,
-            //                     children: [
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                               fixedSize: Size(100, 20),
-            //                               primary: Colors.white,
-            //                               onPrimary: Colors.pink,
-            //                               side: BorderSide(
-            //                                 color: Colors.pink,
-            //                               )),
-            //                           child: Text(
-            //                             'Invite',
-            //                             style: TextStyle(
-            //                               color: Colors.pink,
-            //                             ),
-            //                           )),
-            //                       ElevatedButton(
-            //                           onPressed: () {},
-            //                           style: ElevatedButton.styleFrom(
-            //                             fixedSize: Size(100, 20),
-            //                             primary: Colors.pink,
-            //                             onPrimary: Colors.white,
-            //                           ),
-            //                           child: Text('Details')),
-            //                     ],
-            //                   )
-            //                 ],
-            //               ),
-            //             ),
-            //             onTap: () {},
-            //           ),
-            //         ],
-            //       ),
-            //     )),
-            // SizedBox(
-            //   height: 10,
-            // ),
-            //Explore.........................................................
+            //CV Builder..............................................
+            Padding(
+              padding: EdgeInsets.only(right: 290),
+              child: Text("CV Builder",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+                height: 300,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
+                          height: 280,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 5.0,
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              Image(
+                                  image: AssetImage('assets/images/cvv.jpg'),
+                                  height: 200,
+                                  width: double.infinity,
+                                fit: BoxFit.cover,
+
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Row(
+                                children: [
+                                  Text('Free'),
+                                  SizedBox(width: 100,),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
+                                  SizedBox(width: 10,),
+                                  Container(
+                                    width: 85,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset:
+                                          const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Build Now',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
+                          height: 280,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.shade400,
+                                blurRadius: 0.1,
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/cvv.jpg'),
+                                height: 200,
+                                width: double.infinity,
+                                fit: BoxFit.cover,
+
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Row(
+                                children: [
+                                  Text('৳ 30'),
+                                  SizedBox(width: 100,),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
+                                  SizedBox(width: 10,),
+                                  Container(
+                                    width: 85,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset:
+                                          const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Build Now',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
+                          height: 280,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.shade400,
+                                blurRadius: 0.1,
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/cvv.jpg'),
+                                height: 200,
+                                width: double.infinity,
+                                fit: BoxFit.cover,
+
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Row(
+                                children: [
+                                  Text('৳ 40'),
+                                  SizedBox(width: 100,),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
+                                  SizedBox(width: 10,),
+                                  Container(
+                                    width: 85,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(0xffe90d65),
+                                          Color(0xffac0087)
+                                        ],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          offset:
+                                          const Offset(0.0, 1.0), //(x,y)
+                                          blurRadius: 4.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'Build Now',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                )),
+            SizedBox(
+              height: 20,
+            ),
+
             //Explore.........................................................
             Padding(
-              padding: EdgeInsets.only(right: 270),
-              child: Text("Explore >",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  )),
+              padding: EdgeInsets.only(right: 290),
+              child: Text(
+                "Explore >",
+                style: TextStyle(
+                  fontFamily: 'Poppins-Medium.ttf',
+                  fontSize: 14,
+                  color: textColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             Padding(
               padding: EdgeInsets.all(10.0),
               child: Container(
-                height: 260,
+                height: 250,
                 width: double.infinity,
                 color: Colors.transparent,
                 child: Padding(
@@ -921,7 +724,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Web')
+                                Text(
+                                  'Web',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                )
                               ],
                             ),
                           ),
@@ -956,7 +766,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Page')
+                                Text(
+                                  'Page',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -991,7 +808,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Group')
+                                Text(
+                                  'Group',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -1028,7 +852,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('YouTube')
+                                Text(
+                                  'YouTube',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -1060,7 +891,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Linkedin')
+                                Text(
+                                  'Linkedin',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -1092,7 +930,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 SizedBox(
                                   height: 05,
                                 ),
-                                Text('Instagram')
+                                Text(
+                                  'Instagram',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontFamily: 'Poppins-Medium.ttf',
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -1105,10 +950,12 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             //Services provide..................................................
             Padding(
-              padding: EdgeInsets.only(right: 100),
+              padding: EdgeInsets.only(right: 180),
               child: Text("Service you have Taken",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontFamily: 'Poppins-Regular.ttf',
+                    fontSize: 14,
+                    color: textColor,
                     fontWeight: FontWeight.bold,
                   )),
             ),
@@ -1147,8 +994,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     width: 75,
                                     height: 36,
                                     child: TextButton.icon(
-                                      icon: Image.asset('images/ic_person.png',
-                                          height: 16, width: 16),
+                                      icon: Image.asset(
+                                          'assets/images/ic_person.png',
+                                          height: 16,
+                                          width: 16),
                                       label: Text(
                                         '01',
                                         style: TextStyle(fontSize: 13),
@@ -1168,8 +1017,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.grey.shade50,
                                     radius: 30,
-                                    backgroundImage:
-                                        AssetImage('images/govt.png'),
+                                    backgroundImage: AssetImage(
+                                        'assets/images/govt-logo.png'),
                                   ),
                                   SizedBox(width: 12),
                                   Column(
@@ -1184,8 +1033,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            color: Colors.black,
-                                            fontSize: 15,
+                                            color: textColor,
+                                            fontSize: 14,
                                           ),
                                         ),
                                       ),
@@ -1200,7 +1049,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.normal,
-                                            color: Colors.black,
+                                            color: textColor,
                                             fontSize: 12,
                                           ),
                                         ),
@@ -1219,14 +1068,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                     "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Text(
                                     '৳ 100',
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Container(
@@ -1303,8 +1152,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     width: 75,
                                     height: 36,
                                     child: TextButton.icon(
-                                      icon: Image.asset('images/ic_person.png',
-                                          height: 16, width: 16),
+                                      icon: Image.asset(
+                                          'assets/images/ic_person.png',
+                                          height: 16,
+                                          width: 16),
                                       label: Text(
                                         '01',
                                         style: TextStyle(fontSize: 13),
@@ -1324,8 +1175,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.grey.shade50,
                                     radius: 30,
-                                    backgroundImage:
-                                        AssetImage('images/govt.png'),
+                                    backgroundImage: AssetImage(
+                                        'assets/images/govt-logo.png'),
                                   ),
                                   SizedBox(width: 12),
                                   Column(
@@ -1340,8 +1191,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            color: Colors.black,
-                                            fontSize: 15,
+                                            color: textColor,
+                                            fontSize: 14,
                                           ),
                                         ),
                                       ),
@@ -1356,7 +1207,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.normal,
-                                            color: Colors.black,
+                                            color: textColor,
                                             fontSize: 12,
                                           ),
                                         ),
@@ -1375,14 +1226,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                     "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Text(
                                     '৳ 100',
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Container(
@@ -1459,8 +1310,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     width: 75,
                                     height: 36,
                                     child: TextButton.icon(
-                                      icon: Image.asset('images/ic_person.png',
-                                          height: 16, width: 16),
+                                      icon: Image.asset(
+                                          'assets/images/ic_person.png',
+                                          height: 16,
+                                          width: 16),
                                       label: Text(
                                         '01',
                                         style: TextStyle(fontSize: 13),
@@ -1480,8 +1333,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.grey.shade50,
                                     radius: 30,
-                                    backgroundImage:
-                                        AssetImage('images/govt.png'),
+                                    backgroundImage: AssetImage(
+                                        'assets/images/govt-logo.png'),
                                   ),
                                   SizedBox(width: 12),
                                   Column(
@@ -1496,8 +1349,8 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            color: Colors.black,
-                                            fontSize: 15,
+                                            color: textColor,
+                                            fontSize: 14,
                                           ),
                                         ),
                                       ),
@@ -1512,7 +1365,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontWeight: FontWeight.normal,
-                                            color: Colors.black,
+                                            color: textColor,
                                             fontSize: 12,
                                           ),
                                         ),
@@ -1531,14 +1384,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                     "Grade 5",
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Text(
                                     '৳ 100',
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal,
-                                        color: Colors.black,
+                                        color: textColor,
                                         fontSize: 16),
                                   ),
                                   Container(
