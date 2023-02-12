@@ -1571,8 +1571,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           Container(
                             width: 50,
                             height: 50,
-                            child:
-                            Icon(Icons.mail, color: Colors.white, size: 25),
+                            child: Icon(Icons.mail, color: Colors.white, size: 25),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xffe90d65),
