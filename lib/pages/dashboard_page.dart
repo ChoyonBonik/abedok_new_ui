@@ -58,7 +58,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Khairul Inslam',
+                      'Khairul Islam',
                       style: TextStyle(
                         fontFamily: 'Poppins-Regular.ttf',
                         fontSize: 13,
@@ -317,8 +317,8 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             //CV Builder..............................................
             Padding(
-              padding: EdgeInsets.only(right: 290),
-              child: Text("CV Builder",
+              padding: EdgeInsets.only(right: 280),
+              child: Text("CV Builder >",
                   style: TextStyle(
                     fontSize: 14,
                     color: textColor,
@@ -949,8 +949,8 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             //Services provide..................................................
             Padding(
-              padding: EdgeInsets.only(right: 180),
-              child: Text("Service you have Taken",
+              padding: EdgeInsets.only(right: 170),
+              child: Text("Service you have Taken >",
                   style: TextStyle(
                     fontFamily: 'Poppins-Regular.ttf',
                     fontSize: 14,
@@ -1442,9 +1442,166 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 100,
+            //Live Support.....................................................
+            Padding(
+              padding: EdgeInsets.only(right: 285),
+              child: Text("Say Hello !",
+                  style: TextStyle(
+                    fontFamily: 'Poppins-Regular.ttf',
+                    fontSize: 14,
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                  )),
             ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Container(
+                height: 100,
+                width: double.infinity,
+                color: Colors.transparent,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            child: Icon(FontAwesomeIcons.phone, color: Colors.white, size: 25),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xffe90d65),
+                                Color(0xffac0087)
+                              ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 05,
+                          ),
+                          Text(
+                            'HotLine',
+                            style: TextStyle(
+                              color: textColor,
+                              fontFamily: 'Poppins-Medium.ttf',
+                              fontSize: 12,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            child:
+                            Icon(FontAwesomeIcons.facebookMessenger, color: Colors.white, size: 25),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xffe90d65),
+                                Color(0xffac0087)
+                              ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 05,
+                          ),
+                          Text(
+                            'Messenger',
+                            style: TextStyle(
+                              color: textColor,
+                              fontFamily: 'Poppins-Medium.ttf',
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            child:
+                            Icon(FontAwesomeIcons.whatsapp, color: Colors.white, size: 25),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xffe90d65),
+                                Color(0xffac0087)
+                              ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 05,
+                          ),
+                          Text(
+                            'WhatsApp',
+                            style: TextStyle(
+                              color: textColor,
+                              fontFamily: 'Poppins-Medium.ttf',
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            child:
+                            Icon(Icons.mail, color: Colors.white, size: 25),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xffe90d65),
+                                Color(0xffac0087)
+                              ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 05,
+                          ),
+                          Text(
+                            'Email',
+                            style: TextStyle(
+                              color: textColor,
+                              fontFamily: 'Poppins-Medium.ttf',
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 80,
+            )
           ],
         ),
       ),
