@@ -35,10 +35,10 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
             ),
           ),
-          leadingWidth: 70,
+          leadingWidth: 60,
           titleSpacing: 0,
           leading: Padding(
-            padding: const EdgeInsets.only(top: 18, left: 15),
+            padding: const EdgeInsets.only(top: 18, left: 5),
             child: SleekCircularSlider(
               appearance: CircularSliderAppearance(
                 startAngle: -90,
