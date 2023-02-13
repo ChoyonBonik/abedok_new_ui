@@ -41,6 +41,8 @@ dependencies:
 #  salomon_bottom_bar: ^3.3.1
   google_nav_bar: ^5.0.6
   flutter_screenutil:
+  percent_indicator:
+  sleek_circular_slider:
 
 dev_dependencies:
   flutter_test:

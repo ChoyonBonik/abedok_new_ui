@@ -6,6 +6,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -37,15 +38,32 @@ class _DashboardPageState extends State<DashboardPage> {
           leadingWidth: 70,
           titleSpacing: 0,
           leading: Padding(
-            padding: const EdgeInsets.only(top: 18, left: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage('assets/images/circle.jpg'),
+            padding: const EdgeInsets.only(top: 18, left: 15),
+            child: SleekCircularSlider(
+              appearance: CircularSliderAppearance(
+                startAngle: -90,
+                size: 50,
+                angleRange: 360,
+                customWidths: CustomSliderWidths(
+                  handlerSize: 5,
+                  progressBarWidth: 3,
                 ),
-              ],
+                customColors: CustomSliderColors(
+                  progressBarColor: Colors.green,
+                  dotColor: Colors.green,
+                ),
+              ),
+              min: 0,
+              max: 100,
+              initialValue: 60,
+              innerWidget: (percentage) {
+                return Center(
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/circle.jpg'),
+                    radius: 17,
+                  ),
+                );
+              },
             ),
           ),
           title: Padding(
@@ -90,8 +108,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   IconButton(
                       icon: Icon(Icons.search_rounded), onPressed: () {}),
                   IconButton(
-                      icon: Icon(Icons.notifications_none_outlined),
-                      onPressed: () {}),
+                      icon: Icon(Icons.notifications_none_outlined), onPressed: () {}),
                 ],
               ),
             )
@@ -312,9 +329,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10,),
             //CV Builder..............................................
             Padding(
               padding: EdgeInsets.only(right: 280),
@@ -325,9 +340,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10,),
             SizedBox(
                 height: 300,
                 child: SingleChildScrollView(
@@ -574,9 +587,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20,),
             //Whats New?.......................................................
             Padding(
               padding: EdgeInsets.only(right: 270),
@@ -588,9 +599,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10,),
             SizedBox(
                 height: 200,
                 child: SingleChildScrollView(
@@ -664,9 +673,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20,),
             //Explore.........................................................
             Padding(
               padding: EdgeInsets.only(right: 290),
@@ -958,9 +965,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10,),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
@@ -1598,9 +1603,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 80,
-            )
+            SizedBox(height: 80,)
           ],
         ),
       ),
