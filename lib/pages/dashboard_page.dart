@@ -41,7 +41,8 @@ class _DashboardPageState extends State<DashboardPage> {
             padding: const EdgeInsets.only(top: 18, left: 5),
             child: SleekCircularSlider(
               appearance: CircularSliderAppearance(
-                startAngle: -90,
+                counterClockwise: true,
+                startAngle: 270,
                 size: 50,
                 angleRange: 360,
                 customWidths: CustomSliderWidths(
