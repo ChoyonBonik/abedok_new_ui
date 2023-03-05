@@ -109,7 +109,8 @@ class _DashboardPageState extends State<DashboardPage> {
                   IconButton(
                       icon: Icon(Icons.search_rounded), onPressed: () {}),
                   IconButton(
-                      icon: Icon(Icons.notifications_none_outlined), onPressed: () {}),
+                      icon: Icon(Icons.notifications_none_outlined),
+                      onPressed: () {}),
                 ],
               ),
             )
@@ -330,7 +331,9 @@ class _DashboardPageState extends State<DashboardPage> {
                 ],
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             //CV Builder..............................................
             Padding(
               padding: EdgeInsets.only(right: 280),
@@ -341,7 +344,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             SizedBox(
                 height: 300,
                 child: SingleChildScrollView(
@@ -371,7 +376,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
-
                               ),
                               SizedBox(
                                 height: 12,
@@ -379,9 +383,18 @@ class _DashboardPageState extends State<DashboardPage> {
                               Row(
                                 children: [
                                   Text('Free'),
-                                  SizedBox(width: 100,),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
-                                  SizedBox(width: 10,),
+                                  SizedBox(
+                                    width: 100,
+                                  ),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.remove_red_eye,
+                                        color: Colors.grey.shade600,
+                                      )),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
                                   Container(
                                     width: 85,
                                     height: 32,
@@ -399,7 +412,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                         BoxShadow(
                                           color: Colors.grey,
                                           offset:
-                                          const Offset(0.0, 1.0), //(x,y)
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
@@ -450,7 +463,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
-
                               ),
                               SizedBox(
                                 height: 12,
@@ -458,9 +470,18 @@ class _DashboardPageState extends State<DashboardPage> {
                               Row(
                                 children: [
                                   Text('৳ 30'),
-                                  SizedBox(width: 100,),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
-                                  SizedBox(width: 10,),
+                                  SizedBox(
+                                    width: 100,
+                                  ),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.remove_red_eye,
+                                        color: Colors.grey.shade600,
+                                      )),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
                                   Container(
                                     width: 85,
                                     height: 32,
@@ -478,7 +499,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                         BoxShadow(
                                           color: Colors.grey,
                                           offset:
-                                          const Offset(0.0, 1.0), //(x,y)
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
@@ -529,7 +550,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
-
                               ),
                               SizedBox(
                                 height: 12,
@@ -537,9 +557,18 @@ class _DashboardPageState extends State<DashboardPage> {
                               Row(
                                 children: [
                                   Text('৳ 40'),
-                                  SizedBox(width: 100,),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye, color: Colors.grey.shade600,)),
-                                  SizedBox(width: 10,),
+                                  SizedBox(
+                                    width: 100,
+                                  ),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.remove_red_eye,
+                                        color: Colors.grey.shade600,
+                                      )),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
                                   Container(
                                     width: 85,
                                     height: 32,
@@ -557,7 +586,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                         BoxShadow(
                                           color: Colors.grey,
                                           offset:
-                                          const Offset(0.0, 1.0), //(x,y)
+                                              const Offset(0.0, 1.0), //(x,y)
                                           blurRadius: 4.0,
                                         ),
                                       ],
@@ -588,7 +617,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             //Whats New?.......................................................
             Padding(
               padding: EdgeInsets.only(right: 270),
@@ -600,7 +631,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             SizedBox(
                 height: 200,
                 child: SingleChildScrollView(
@@ -609,15 +642,15 @@ class _DashboardPageState extends State<DashboardPage> {
                     children: [
                       InkWell(
                         child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
+                          margin: EdgeInsets.all(20),
+                          height: 220,
                           width: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new1.jpg'),
+                                image: AssetImage(
+                                    'assets/images/Abedon-Police.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -625,15 +658,15 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                       InkWell(
                         child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
+                          margin: EdgeInsets.all(20),
+                          height: 220,
                           width: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new2.jpg'),
+                                image: AssetImage(
+                                    'assets/images/Abedon-Police.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -641,15 +674,15 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                       InkWell(
                         child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
+                          margin: EdgeInsets.all(20),
+                          height: 220,
                           width: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new3.jpg'),
+                                image: AssetImage(
+                                    'assets/images/Cashback.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -657,15 +690,15 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                       InkWell(
                         child: Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
+                          margin: EdgeInsets.all(20),
+                          height: 220,
                           width: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.blue,
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/whats_new4.jpg'),
+                                image: AssetImage(
+                                    'assets/images/CMCH.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -674,7 +707,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     ],
                   ),
                 )),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             //Explore.........................................................
             Padding(
               padding: EdgeInsets.only(right: 290),
@@ -966,7 +1001,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
@@ -1459,7 +1496,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     fontWeight: FontWeight.bold,
                   )),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Padding(
               padding: EdgeInsets.all(10.0),
               child: Container(
@@ -1476,7 +1515,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Container(
                             width: 50,
                             height: 50,
-                            child: Icon(FontAwesomeIcons.phone, color: Colors.white, size: 25),
+                            child: Icon(FontAwesomeIcons.phone,
+                                color: Colors.white, size: 25),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xffe90d65),
@@ -1509,8 +1549,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Container(
                             width: 50,
                             height: 50,
-                            child:
-                            Icon(FontAwesomeIcons.facebookMessenger, color: Colors.white, size: 25),
+                            child: Icon(FontAwesomeIcons.facebookMessenger,
+                                color: Colors.white, size: 25),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xffe90d65),
@@ -1543,8 +1583,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Container(
                             width: 50,
                             height: 50,
-                            child:
-                            Icon(FontAwesomeIcons.whatsapp, color: Colors.white, size: 25),
+                            child: Icon(FontAwesomeIcons.whatsapp,
+                                color: Colors.white, size: 25),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xffe90d65),
@@ -1577,7 +1617,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           Container(
                             width: 50,
                             height: 50,
-                            child: Icon(Icons.mail, color: Colors.white, size: 25),
+                            child:
+                                Icon(Icons.mail, color: Colors.white, size: 25),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xffe90d65),
@@ -1604,7 +1645,9 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ),
             ),
-            SizedBox(height: 80,)
+            SizedBox(
+              height: 80,
+            )
           ],
         ),
       ),

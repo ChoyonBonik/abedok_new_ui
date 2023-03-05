@@ -19,7 +19,8 @@ class _GovtJobState extends State<GovtJob> {
     final width = MediaQuery.of(context).size.width;
     final textScaleFactor = width / mockupWidth;
     return Scaffold(
-        appBar: AppBar(
+        appBar:
+        AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
           leading: Container(
